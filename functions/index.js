@@ -3,16 +3,14 @@ const express = require("express") ;
 const app = require("express")() ; 
 const bodyparser = require("body-parser") ; 
 const functions = require("firebase-functions") ;
-const request_controller = require("./controller/requests_controller") ; 
+const request_controller = require("./requests_controller") ; 
 
 
 
-app.use(bodyparser) ; 
+app.use(express.static('../public/')) ; 
+
 
 request_controller(app) ; 
-
-
-app.use(express.static('./public/')) ; 
 
 app.use((req ,res , next)=>{
     res.status(404).redirect('/404.html') ; 
