@@ -18,11 +18,11 @@ module.exports = function Handle_requests(app)
 	console.log('Request Handler started ! ') ;
 
 	app.get('/' , (req , res)=>{
-		res.sendFile(__dirname + '/views/index.html') ; 
+		res.sendFile(__dirname + '/index.html') ; 
 	})
 
 	app.get('/home' , (req , res)=>{
-		res.sendFile(__dirname + '/views/index.html') ; 
+		res.sendFile(__dirname + '/index.html') ; 
 	})
 
 
