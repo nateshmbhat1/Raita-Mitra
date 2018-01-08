@@ -1,0 +1,137 @@
+[debug] [2018-01-07T15:37:11.747Z] ----------------------------------------------------------------------
+[debug] [2018-01-07T15:37:11.747Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\Natesh\AppData\Roaming\npm\node_modules\firebase-tools\bin\firebase serve --only functions,hosting
+[debug] [2018-01-07T15:37:11.747Z] CLI Version:   3.16.0
+[debug] [2018-01-07T15:37:11.747Z] Platform:      win32
+[debug] [2018-01-07T15:37:11.747Z] Node Version:  v6.11.5
+[debug] [2018-01-07T15:37:11.747Z] Time:          Sun Jan 07 2018 21:07:11 GMT+0530 (India Standard Time)
+[debug] [2018-01-07T15:37:11.747Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2018-01-07T15:37:11.747Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2018-01-07T15:37:11.747Z] > authorizing via signed-in user
+[debug] [2018-01-07T15:37:11.763Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/projects/raita-mitra-2018  
+  
+ Sun Jan 07 2018 21:07:11 GMT+0530 (India Standard Time)
+[debug] [2018-01-07T15:37:12.903Z] <<< HTTP RESPONSE 200
+[debug] [2018-01-07T15:37:12.903Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/database/raita-mitra-2018/tokens  
+  
+ Sun Jan 07 2018 21:07:12 GMT+0530 (India Standard Time)
+[debug] [2018-01-07T15:37:13.866Z] <<< HTTP RESPONSE 200
+[info] 
+[info] === Serving from 'C:\Users\Natesh\Desktop\Farmer Project'...
+[info] 
+[info] i  functions: Preparing to emulate functions.
+[debug] [2018-01-07T15:37:14.902Z] >>> HTTP REQUEST GET https://appengine.googleapis.com/v1/apps/raita-mitra-2018  
+  
+ Sun Jan 07 2018 21:07:14 GMT+0530 (India Standard Time)
+[debug] [2018-01-07T15:37:14.902Z] >>> HTTP REQUEST GET https://apikeys.googleapis.com/v1/projects/raita-mitra-2018/apiKeys  
+  
+ Sun Jan 07 2018 21:07:14 GMT+0530 (India Standard Time)
+[debug] [2018-01-07T15:37:14.902Z] >>> HTTP REQUEST GET https://cloudresourcemanager.googleapis.com/v1/projects/raita-mitra-2018  
+  
+ Sun Jan 07 2018 21:07:14 GMT+0530 (India Standard Time)
+[debug] [2018-01-07T15:37:16.370Z] <<< HTTP RESPONSE 200
+[debug] [2018-01-07T15:37:16.370Z] >>> HTTP REQUEST GET https://mobilesdk-pa.googleapis.com/v1/projects/905152372146/clients/_:getWebAppConfig  
+  
+ Sun Jan 07 2018 21:07:16 GMT+0530 (India Standard Time)
+[debug] [2018-01-07T15:37:16.479Z] <<< HTTP RESPONSE 200
+[debug] [2018-01-07T15:37:16.495Z] <<< HTTP RESPONSE 200
+[debug] [2018-01-07T15:37:17.104Z] <<< HTTP RESPONSE 200
+[info] i  hosting: Serving hosting files from: public
+[info] +  hosting: Local server: http://localhost:5000
+
+[info] +  functions: app: http://localhost:5001/raita-mitra-2018/us-central1/app
+[info] Shutting down...
+[debug] [2018-01-07T16:11:48.341Z] ----------------------------------------------------------------------
+[debug] [2018-01-07T16:11:48.343Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\Natesh\AppData\Roaming\npm\node_modules\firebase-tools\bin\firebase serve --only functions,hosting
+[debug] [2018-01-07T16:11:48.343Z] CLI Version:   3.16.0
+[debug] [2018-01-07T16:11:48.343Z] Platform:      win32
+[debug] [2018-01-07T16:11:48.343Z] Node Version:  v6.11.5
+[debug] [2018-01-07T16:11:48.343Z] Time:          Sun Jan 07 2018 21:41:48 GMT+0530 (India Standard Time)
+[debug] [2018-01-07T16:11:48.344Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2018-01-07T16:11:48.352Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2018-01-07T16:11:48.352Z] > authorizing via signed-in user
+[debug] [2018-01-07T16:11:48.353Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] [2018-01-07T16:11:48.353Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ { refresh_token: '1/MndOwxhDQ7xDebDjvlryCDipHpcGUcEHr1TjtzC56K4',
+  client_id: '563584335869-fgrhgmd47bqnekij5i8b5pr03ho849e6.apps.googleusercontent.com',
+  client_secret: 'j9iVZfS8kkCEFUPaAeJV0sAi',
+  grant_type: 'refresh_token',
+  scope: 'email https://www.googleapis.com/auth/cloud-platform https://www.googleapis.com/auth/cloudplatformprojects.readonly https://www.googleapis.com/auth/firebase openid' } 
+ Sun Jan 07 2018 21:41:48 GMT+0530 (India Standard Time)
+[debug] [2018-01-07T16:11:48.608Z] <<< HTTP RESPONSE 200
+[debug] [2018-01-07T16:11:48.639Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/projects/raita-mitra-2018  
+  
+ Sun Jan 07 2018 21:41:48 GMT+0530 (India Standard Time)
+[debug] [2018-01-07T16:11:49.952Z] <<< HTTP RESPONSE 200
+[debug] [2018-01-07T16:11:49.954Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/database/raita-mitra-2018/tokens  
+  
+ Sun Jan 07 2018 21:41:49 GMT+0530 (India Standard Time)
+[debug] [2018-01-07T16:11:50.915Z] <<< HTTP RESPONSE 200
+[info] 
+[info] === Serving from 'C:\Users\Natesh\Desktop\Farmer Project'...
+[info] 
+[info] i  functions: Preparing to emulate functions.
+[debug] [2018-01-07T16:11:51.701Z] >>> HTTP REQUEST GET https://appengine.googleapis.com/v1/apps/raita-mitra-2018  
+  
+ Sun Jan 07 2018 21:41:51 GMT+0530 (India Standard Time)
+[debug] [2018-01-07T16:11:51.701Z] >>> HTTP REQUEST GET https://apikeys.googleapis.com/v1/projects/raita-mitra-2018/apiKeys  
+  
+ Sun Jan 07 2018 21:41:51 GMT+0530 (India Standard Time)
+[debug] [2018-01-07T16:11:51.701Z] >>> HTTP REQUEST GET https://cloudresourcemanager.googleapis.com/v1/projects/raita-mitra-2018  
+  
+ Sun Jan 07 2018 21:41:51 GMT+0530 (India Standard Time)
+[debug] [2018-01-07T16:11:53.155Z] <<< HTTP RESPONSE 200
+[debug] [2018-01-07T16:11:53.155Z] >>> HTTP REQUEST GET https://mobilesdk-pa.googleapis.com/v1/projects/905152372146/clients/_:getWebAppConfig  
+  
+ Sun Jan 07 2018 21:41:53 GMT+0530 (India Standard Time)
+[debug] [2018-01-07T16:11:53.216Z] <<< HTTP RESPONSE 200
+[debug] [2018-01-07T16:11:53.282Z] <<< HTTP RESPONSE 200
+[debug] [2018-01-07T16:11:53.908Z] <<< HTTP RESPONSE 200
+[info] i  hosting: Serving hosting files from: public
+[info] +  hosting: Local server: http://localhost:5000
+
+[info] +  functions: app: http://localhost:5001/raita-mitra-2018/us-central1/app
+[info] Shutting down...
+[debug] [2018-01-07T16:40:19.852Z] ----------------------------------------------------------------------
+[debug] [2018-01-07T16:40:19.852Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\Natesh\AppData\Roaming\npm\node_modules\firebase-tools\bin\firebase serve --only functions,hosting
+[debug] [2018-01-07T16:40:19.852Z] CLI Version:   3.16.0
+[debug] [2018-01-07T16:40:19.852Z] Platform:      win32
+[debug] [2018-01-07T16:40:19.852Z] Node Version:  v6.11.5
+[debug] [2018-01-07T16:40:19.852Z] Time:          Sun Jan 07 2018 22:10:19 GMT+0530 (India Standard Time)
+[debug] [2018-01-07T16:40:19.852Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2018-01-07T16:40:19.868Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2018-01-07T16:40:19.868Z] > authorizing via signed-in user
+[debug] [2018-01-07T16:40:19.868Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/projects/raita-mitra-2018  
+  
+ Sun Jan 07 2018 22:10:19 GMT+0530 (India Standard Time)
+[debug] [2018-01-07T16:40:21.170Z] <<< HTTP RESPONSE 200
+[debug] [2018-01-07T16:40:21.173Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/database/raita-mitra-2018/tokens  
+  
+ Sun Jan 07 2018 22:10:21 GMT+0530 (India Standard Time)
+[debug] [2018-01-07T16:40:22.207Z] <<< HTTP RESPONSE 200
+[info] 
+[info] === Serving from 'C:\Users\Natesh\Desktop\Farmer Project'...
+[info] 
+[info] i  functions: Preparing to emulate functions.
+[debug] [2018-01-07T16:40:23.216Z] >>> HTTP REQUEST GET https://appengine.googleapis.com/v1/apps/raita-mitra-2018  
+  
+ Sun Jan 07 2018 22:10:23 GMT+0530 (India Standard Time)
+[debug] [2018-01-07T16:40:23.219Z] >>> HTTP REQUEST GET https://apikeys.googleapis.com/v1/projects/raita-mitra-2018/apiKeys  
+  
+ Sun Jan 07 2018 22:10:23 GMT+0530 (India Standard Time)
+[debug] [2018-01-07T16:40:23.220Z] >>> HTTP REQUEST GET https://cloudresourcemanager.googleapis.com/v1/projects/raita-mitra-2018  
+  
+ Sun Jan 07 2018 22:10:23 GMT+0530 (India Standard Time)
+[debug] [2018-01-07T16:40:24.780Z] <<< HTTP RESPONSE 200
+[debug] [2018-01-07T16:40:24.780Z] >>> HTTP REQUEST GET https://mobilesdk-pa.googleapis.com/v1/projects/905152372146/clients/_:getWebAppConfig  
+  
+ Sun Jan 07 2018 22:10:24 GMT+0530 (India Standard Time)
+[debug] [2018-01-07T16:40:24.905Z] <<< HTTP RESPONSE 200
+[debug] [2018-01-07T16:40:24.905Z] <<< HTTP RESPONSE 200
+[debug] [2018-01-07T16:40:25.727Z] <<< HTTP RESPONSE 200
+[info] i  hosting: Serving hosting files from: public
+[info] +  hosting: Local server: http://localhost:5000
+
+[info] +  functions: app: http://localhost:5001/raita-mitra-2018/us-central1/app
