@@ -13,6 +13,21 @@ admin.initializeApp({
 
 
 
+//Validates POST request body and checks if the request contains all the keys('strings') in the array sent as keys argument
+function validatePostBody(req , res , keys ){
+    for(i in keys){
+        if(!(keys[i] in req.body))
+        {
+            console.log("invalid post request returning ! ") ; 
+            return false ; 
+        }
+    }
+    return true ; 
+}
+
+
+
+
 module.exports = function Handle_requests(app)
 {
 	console.log('Request Handler started ! ') ;
@@ -27,6 +42,7 @@ module.exports = function Handle_requests(app)
 
 
 	app.post('/putNPK', urlencodedParser ,(req , res)=>{
+		if(!validatePostBody(req , res , ['']))
 
 		ref = admin.database().ref('/users/' + req.body.phone) ; 
 		ref.set(req.body) ;
