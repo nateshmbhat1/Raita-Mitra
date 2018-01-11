@@ -49,9 +49,12 @@ module.exports = function Handle_requests(app)
 		ref = admin.database().ref('/Soil Sample/' + req.body.survey_num) ; 
 
 		data = req.body ; 
+		today = new Date() ; 
+		data.collected_data =  today.toDateString() ; 
 		delete data.survey_num ;
 		
-		["resultId" , "pH" , "nitrogen" , "phosphorus" , "potassium" , "cropSuggested" , "fertilizerComb1" , "fertilizerComb2"].forEach(ele=>{
+		[ "pH" , "nitrogen" , "phosphorus" , "potassium" , "cropSuggested" , "fertilizerComb1" , "fertilizerComb2","EC", 
+		"sulphur" , "zinc" , "boron" , "iron" , "manganese" , "copper"].forEach(ele=>{
 			data[ele] = '' ; 
 		})
 		data.status = "pending" ; 
