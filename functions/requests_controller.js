@@ -43,13 +43,25 @@ module.exports = function Handle_requests(app)
 	})
 
 
-	app.post('/putNPK', urlencodedParser ,(req , res)=>{
-		if(!validatePostBody(req , res , ['fertilizer' ,'crop' , 'nitrogen' , 'phone' , 'phosphorus' , 'potassium'])) return ;  
+	app.post('/addTestSample', urlencodedParser ,(req , res)=>{
+		if(!validatePostBody(req , res , ['phone' ,'survey_num' , 'khasra_num' , 'irrigated' , 'position' , 'farm_size'])) return ;  
 
-		ref = admin.database().ref('/users/' + req.body.phone) ; 
-		ref.set(req.body) ;
+		ref = admin.database().ref('/Soil Sample/' + req.body.survey_num) ; 
+
+		data = req.body ; 
+		delete data.survey_num ;
+		
+		["resultId" , "pH" , "nitrogen" , "phosphorus" , "potassium" , "cropSuggested" , "fertilizerComb1" , "fertilizerComb2"].forEach(ele=>{
+			data[ele] = '' ; 
+		})
+		data.status = "pending" ; 
+
+		console.log(data) ;
+		ref.set(data) ; 
+
+
 		console.log("Added to firebase database") ;
-		res.status(200).redirect('/') ;
+		res.status(200).redirect('/index3.html') ;
 		
 		admin.messaging().sendToTopic('global' , {
 			notification : {
