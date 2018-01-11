@@ -492,11 +492,12 @@
 								</thead>
 								<tbody>
 								<tr>
-                                            <td>1</td>
-                                            <td>Nigam</td>
+                                            <td> 1</td>
+                                            <td><a href="javascript: void(0);" target="_blank" data-toggle="modal" data-target="#addDetails">Nigam</a></td>
                                             <td>9999123123</td>
-                                            <td><span class="label label-danger">pending</span></td>
+                                           <td><span class="label label-danger">pending</span></td>
                                         </tr>
+										
                                         <tr>
                                             <td>2</td>
                                             <td>Deshmukh</td>
@@ -518,6 +519,38 @@
                    
                 </div>
                 <!-- /.row -->
+								<div class="modal fade" id="addDetails" tabindex="-1" role="dialog"
+					aria-labelledby="myModalLabel">
+					<div class="modal-dialog" role="document">
+						<div class="modal-content">
+							<div class="modal-header" align="center">
+								<button type="button" class="close" data-dismiss="modal"
+									aria-label="Close">
+									<span aria-hidden="true">&times;</span>
+								</button>
+								<h4 class="modal-title" id="myModalLabel">Add New Test Sample</h4>
+							</div>
+
+							<div class="modal-body">
+			        <form method="post" action="/putNPK">
+
+            <div class="form-group">
+                <label class="control-label">Sample Number</label>
+                <input class="form-control input-lg" type="text" name="fertilizer">
+            </div>
+            <div class="form-group">
+    <label class="control-label">Phone Number</label>
+    <input type="number" name="phone" required placeholder="9441234567" class="form-control input-lg" id="phone" />
+	</div>
+	
+    <div id="div_submit">
+        <button class="btn btn-success btn-lg" type="submit">Submit </button>
+    </div>
+</div>
+        </form>
+							</div>
+						</div>
+					</div>
                 <!-- ============================================================== -->
                 <!-- Right sidebar -->
                 <!-- ============================================================== -->

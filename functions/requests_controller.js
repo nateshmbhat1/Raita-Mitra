@@ -2,8 +2,8 @@ const admin = require("firebase-admin") ;
 const bodyparser = require("body-parser") ; 
 const app = require("express")() ; 
 const urlencodedParser =bodyparser.urlencoded({extended : true}) ;
-const posthandler = require("posthandler") ;
-const gethandler = require("gethandler") ;
+// const posthandler = require("posthandler") ;
+// const gethandler = require("gethandler") ;
 
 
 var serviceAccount = require("C:/Users/Natesh/Documents/raita-mitra-2018-firebase-adminsdk (acnt nateshmbhat1).json");
