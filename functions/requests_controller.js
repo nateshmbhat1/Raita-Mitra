@@ -43,6 +43,24 @@ module.exports = function Handle_requests(app)
 	})
 
 
+	app.post('/updateSampleDetails' , (req ,res)=>{
+		ref = admin.database().ref('/Soil Sample' + req.body.sample_no) ;
+		data = ref.body ; 
+		delete data.sample_no ; 
+		delete data.collected_data ; 	
+
+		data.status = "completed" ; 
+		console.log(data) ;
+		ref.set(data) ; 
+
+
+		console.log("updated to firebase database") ;
+		res.status(200).redirect('/UntestedSoil.html') ;
+
+
+	})
+
+
 	app.post('/addTestSample', urlencodedParser ,(req , res)=>{
 		if(!validatePostBody(req , res , ['phone' ,'survey_num' , 'khasra_num' , 'irrigated' , 'position' , 'farm_size'])) return ;  
 
