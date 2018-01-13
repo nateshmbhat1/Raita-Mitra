@@ -211,7 +211,7 @@
                                     <li><a href="extra-charts.html">Extra Charts</a></li>
                                 </ul>
                             </li>
-                            
+
                         </ul>
                     </li>
                     <!-- /.Megamenu -->
@@ -241,7 +241,7 @@
                         </ul>
                         <!-- /.dropdown-user -->
                     </li>
-                    
+
                     <!-- /.dropdown -->
                 </ul>
             </div>
@@ -453,7 +453,6 @@
         <!-- ============================================================== -->
         <!-- Page Content -->
         <!-- ============================================================== -->
-        
         <div id="page-wrapper">
             <div class="container-fluid">
                 <div class="row bg-title">
@@ -478,9 +477,9 @@
                             <p class="text-muted"></p>
                             <div class="form-group">
                                 <input type="text" style="font-size:16px;" class="form-control" id="search_untested_soil_table" onkeyup="search_untested_soil_table()" placeholder="Search for Name :">
-                                
+
                                 <!-- <select id="select_search_by_column" class="form-select">
-                                   <option value="name" selected>Farmer Name</option> 
+                                   <option value="name" selected>Farmer Name</option>
                                    <option value="sampleno">Sample No</option>
                                    <option value="phone">Phone No</option>
                                 </select> -->
@@ -494,20 +493,20 @@
 										<th>Sample No</th>
 										<th> Farmer Name</th>
 										<th>Phone No.</th>
-										
+
 										<th>Status</th>
-										
+
 
 									</tr>
 								</thead>
 								<tbody id="untested_soil_data_entries">
                                         <tr>
                                             <td> 1</td>
-                                            <td><a href="javascript: void(0);" target="_blank" data-toggle="modal" data-target="#addDetails">Nigam</a></td>
+                                            <td><a href="javascript: void(0);" target="_blank" data-toggle="modal" data-id="1"data-target="#addDetails">Nigam</a></td>
                                             <td>9999123123</td>
                                            <td><span class="label label-danger">pending</span></td>
                                         </tr>
-										
+
                                         <tr>
                                             <td>2</td>
                                             <td>Deshmukh</td>
@@ -520,13 +519,13 @@
                                             <td>9999123123</td>
                                             <td><span class="label label-danger">pending</span></td>
                                         </tr>
-									
+
 								</tbody>
 
 							</table>
 						</div>
 					</div>
-                   
+
                 </div>
                 <!-- /.row -->
                 <div class="modal fade" id="addDetails" tabindex="-1" role="dialog"
@@ -543,9 +542,10 @@
 
                         <div class="modal-body">
                 <form method="post" action="/updateSampleDetails">
+
                     <div class="form-group">
                         <label class="control-label">SampleNumber</label>
-                        <input class="form-control" type="text">
+                        <input class="form-control" type="text" id="sampleno">
                     </div>
                     <div class="form-group">
                         <label class="control-label">Phone number</label>
@@ -566,7 +566,7 @@
                     <div class="form-group">
                         <label class="control-label">EC</label>
                             <input  type="text" class="form-control input-lg" name="EC" />
-                    </div>    
+                    </div>
                     <div class="form-group">
                         <label class="control-label">Available Nitrogen</label>
                         <input type="text" class="form-control input-lg" name="nitrogen">
@@ -635,7 +635,7 @@
                         <label class="control-label">Khasra number</label>
                         <input type="text" class="form-control input-lg" name="khasra_num">
                     </div>
-                
+
             <div id="div_submit">
                 <button class="btn btn-success btn-lg" style="background-color:green;" type="submit">Submit </button>
             </div>
@@ -726,6 +726,21 @@
     <script src="js/waves.js"></script>
     <!-- Custom Theme JavaScript -->
     <script src="js/custom.min.js"></script>
+    <script>
+  		/* action on show of delete modal */
+  		$('#addDetails')
+  				.on(
+  						'show.bs.modal',
+  						function(e) {
+
+  							var sampleID = $(e.relatedTarget).data('id');
+
+
+  							/* Set the var to the inner html */
+  							document.getElementById('sampleno').value = sampleID;
+
+  						});
+  	</script>
     <!--Style Switcher -->
     <script src="../plugins/bower_components/styleswitcher/jQuery.style.switcher.js"></script>
 
