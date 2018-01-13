@@ -471,12 +471,17 @@
                 </div>
                 <!-- row -->
                 <div class="row">
-                   					<div class="color-table warning-table">
+                    <div class="color-table warning-table">
 						<div class="white-box">
 							<!-- <h3 class="box-title">Employees Details in Database</h3> -->
                             <p class="text-muted"></p>
                             <div class="form-group">
-                                <input type="text" class="form-control" style="font-size:16px;" id="search_untested_soil_table" onkeyup="search_untested_soil_table()" placeholder="Search for names..">
+                                <input type="text" class="" style="font-size:16px;" id="search_untested_soil_table" onkeyup="search_untested_soil_table()" placeholder="Search for names..">
+                                <select id="select_search_by_column">
+                                   <option value="name">Farmer Name</option> 
+                                   <option value="sampleno">Sample No</option>
+                                   <option value="phone">Phone No</option>
+                                </select>
                             </div>
 							<table
 								class="table m-t-30 table-hover color-bordered-table inverse-bordered-table"
@@ -522,38 +527,123 @@
                    
                 </div>
                 <!-- /.row -->
-								<div class="modal fade" id="addDetails" tabindex="-1" role="dialog"
-					aria-labelledby="myModalLabel">
-					<div class="modal-dialog" role="document">
-						<div class="modal-content">
-							<div class="modal-header" align="center">
-								<button type="button" class="close" data-dismiss="modal"
-									aria-label="Close">
-									<span aria-hidden="true">&times;</span>
-								</button>
-								<h4 class="modal-title" id="myModalLabel">Add New Test Sample</h4>
-							</div>
+                <div class="modal fade" id="addDetails" tabindex="-1" role="dialog"
+                aria-labelledby="myModalLabel">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header" align="center">
+                            <button type="button" class="close" data-dismiss="modal"
+                                aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                            <h4 class="modal-title" id="myModalLabel"> Test Sample 1</h4>
+                        </div>
 
-							<div class="modal-body">
-			        <form method="post" action="/putNPK">
-
-            <div class="form-group">
-                <label class="control-label">Sample Number</label>
-                <input class="form-control input-lg" type="text" name="fertilizer">
+                        <div class="modal-body">
+                <form method="post" action="/putNPK">
+                    <div class="form-group">
+                        <label class="control-label">SampleNumber</label>
+                        <input class="form-control" type="text">
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label">Phone number</label>
+                        <input class="form-control input-lg" type="number" name="phone">
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label">Position</label>
+                        <input class="form-control input-lg" type="number" name="position">
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label">Status</label>
+                        <input class="form-control input-lg" type="number" name="status">
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label">pH</label>
+                        <input class="form-control input-lg" type="number" name="pH">
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label">EC</label>
+                            <input  type="text" class="form-control input-lg" name="EC" />
+                    </div>    
+                    <div class="form-group">
+                        <label class="control-label">Available Nitrogen</label>
+                        <input type="text" class="form-control input-lg" name="nitrogen">
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label">Available Phosporous</label>
+                        <input type="text" class="form-control input-lg" name="phosphorous">
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label">Available Potassium</label>
+                        <input type="text" class="form-control input-lg" name="potassium">
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label">Available Sulphur</label>
+                        <input type="text" class="form-control input-lg" name="sulphur">
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label">Available Zinc</label>
+                        <input type="text" class="form-control input-lg" name="zinc">
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label">Available Boron</label>
+                        <input type="text" class="form-control input-lg" name="boron">
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label">Available Iron</label>
+                        <input type="text" class="form-control input-lg" name="iron">
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label">Available Manganese</label>
+                        <input type="text" class="form-control input-lg" name="manganese">
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label">Available Copper</label>
+                        <input type="text" class="form-control input-lg" name="copper">
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label">Available Zinc</label>
+                        <input type="text" class="form-control input-lg" name="zinc">
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label">Fertilizer</label>
+                        <input type="text" class="form-control input-lg" name="fertilizer">
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label">Fertilizer combination-1 for N P K</label>
+                        <input type="text" class="form-control input-lg" name="fertilizerComb1">
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label">Fertilizer combination-2 for N P K</label>
+                        <input type="text" class="form-control input-lg" name="fertilizerComb2">
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label">Collected data</label>
+                        <input type="text" class="form-control input-lg" name="collected_data">
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label">Farm size</label>
+                        <input type="text" class="form-control input-lg" name="farm_size">
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label">Irrigated</label>
+                        <input type="text" class="form-control input-lg" name="irrigated">
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label">Khasra number</label>
+                        <input type="text" class="form-control input-lg" name="khasra_num">
+                    </div>
+                
+            <div id="div_submit">
+                <button class="btn btn-success btn-lg" style="background-color:green;" type="submit">Submit </button>
             </div>
-            <div class="form-group">
-    <label class="control-label">Phone Number</label>
-    <input type="number" name="phone" required placeholder="9441234567" class="form-control input-lg" id="phone" />
-	</div>
-	
-    <div id="div_submit">
-        <button class="btn btn-success btn-lg" type="submit">Submit </button>
-    </div>
-</div>
-        </form>
-							</div>
-						</div>
-					</div>
+            </div>
+            </div>
+                </form>
+                        </div>
+                    </div>
+                </div>
+
                 <!-- ============================================================== -->
                 <!-- Right sidebar -->
                 <!-- ============================================================== -->
