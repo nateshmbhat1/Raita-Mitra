@@ -20,6 +20,7 @@ ref.once('value', snap=>{
   Object.keys(obj).map((sample_no , index) =>{
     data = obj[sample_no] ;
     console.log("value obtained !") ;
+    console.log(data.status) ; 
     
     $('#untested_soil_data_entries').append(`
     <tr>
@@ -27,7 +28,7 @@ ref.once('value', snap=>{
       <td><a href="javascript: void(0);" target="_blank" data-toggle="modal" data-id=${sample_no} data-target="#addDetails">${"NAME"}</a></td>
       <td>${data.phone}</td>
       ${(data.status=="pending")?`<td><span class="label label-danger">pending</span></td></tr>
-    `:`<td><span class="label label-success">completed</span></td>`}
+    `:`<td><span class="label label-success">${data.status}</span></td>`}
       </tr>
   `) ; 
 
