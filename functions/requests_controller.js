@@ -44,6 +44,7 @@ module.exports = function Handle_requests(app)
 
 
 	app.post('/updateSampleDetails' , (req ,res)=>{
+		console.log(req.body) ; 
 		ref = admin.database().ref('/Soil Sample' + req.body.sampleno) ;
 		data = ref.body ; 
 		delete data.sample_no ; 
@@ -55,7 +56,7 @@ module.exports = function Handle_requests(app)
 
 
 		console.log("updated to firebase database") ;
-		res.status(200).redirect('/UntestedSoil.html') ;
+		res.status(200).redirect('UntestedSoil.html') ;
 
 
 	})
@@ -82,7 +83,7 @@ module.exports = function Handle_requests(app)
 
 
 		console.log("Added to firebase database") ;
-		res.status(200).redirect('/index3.html') ;
+		res.status(200).redirect('index3.html') ;
 		
 		admin.messaging().sendToTopic('global' , {
 			notification : {

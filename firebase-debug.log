@@ -260,3 +260,90 @@
 [info] [hosting] Rewriting /404.html/ to local function app
 [info] [hosting] Rewriting /404.html/ to local function app
 [info] [hosting] Rewriting /404.html/ to local function app
+[info] Shutting down...
+[debug] [2018-01-14T05:07:16.491Z] ----------------------------------------------------------------------
+[debug] [2018-01-14T05:07:16.493Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\Natesh\AppData\Roaming\npm\node_modules\firebase-tools\bin\firebase serve --only hosting,functions
+[debug] [2018-01-14T05:07:16.493Z] CLI Version:   3.16.0
+[debug] [2018-01-14T05:07:16.493Z] Platform:      win32
+[debug] [2018-01-14T05:07:16.493Z] Node Version:  v6.11.5
+[debug] [2018-01-14T05:07:16.494Z] Time:          Sun Jan 14 2018 10:37:16 GMT+0530 (India Standard Time)
+[debug] [2018-01-14T05:07:16.494Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2018-01-14T05:07:16.504Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2018-01-14T05:07:16.505Z] > authorizing via signed-in user
+[debug] [2018-01-14T05:07:16.507Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/projects/raita-mitra-2018  
+  
+ Sun Jan 14 2018 10:37:16 GMT+0530 (India Standard Time)
+[debug] [2018-01-14T05:07:18.775Z] <<< HTTP RESPONSE 200
+[debug] [2018-01-14T05:07:18.775Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/database/raita-mitra-2018/tokens  
+  
+ Sun Jan 14 2018 10:37:18 GMT+0530 (India Standard Time)
+[debug] [2018-01-14T05:07:19.981Z] <<< HTTP RESPONSE 200
+[info] 
+[info] === Serving from 'C:\Users\Natesh\Desktop\Farmer Project'...
+[info] 
+[info] i  functions: Preparing to emulate functions.
+[debug] [2018-01-14T05:07:20.905Z] >>> HTTP REQUEST GET https://appengine.googleapis.com/v1/apps/raita-mitra-2018  
+  
+ Sun Jan 14 2018 10:37:20 GMT+0530 (India Standard Time)
+[debug] [2018-01-14T05:07:20.905Z] >>> HTTP REQUEST GET https://apikeys.googleapis.com/v1/projects/raita-mitra-2018/apiKeys  
+  
+ Sun Jan 14 2018 10:37:20 GMT+0530 (India Standard Time)
+[debug] [2018-01-14T05:07:20.906Z] >>> HTTP REQUEST GET https://cloudresourcemanager.googleapis.com/v1/projects/raita-mitra-2018  
+  
+ Sun Jan 14 2018 10:37:20 GMT+0530 (India Standard Time)
+[debug] [2018-01-14T05:07:23.219Z] <<< HTTP RESPONSE 200
+[debug] [2018-01-14T05:07:23.220Z] >>> HTTP REQUEST GET https://mobilesdk-pa.googleapis.com/v1/projects/905152372146/clients/_:getWebAppConfig  
+  
+ Sun Jan 14 2018 10:37:23 GMT+0530 (India Standard Time)
+[debug] [2018-01-14T05:07:23.236Z] <<< HTTP RESPONSE 200
+[debug] [2018-01-14T05:07:23.295Z] <<< HTTP RESPONSE 200
+[debug] [2018-01-14T05:07:24.943Z] <<< HTTP RESPONSE 200
+[info] i  hosting: Serving hosting files from: public
+[info] +  hosting: Local server: http://localhost:5000
+
+[info] +  functions: app: http://localhost:5001/raita-mitra-2018/us-central1/app
+[info] [hosting] Rewriting /index.html/ to local function app
+[info] [hosting] Rewriting /404.html/ to local function app
+[info] [hosting] Rewriting /404.html/ to local function app
+[info] [hosting] Rewriting /404.html/ to local function app
+[info] [hosting] Rewriting /404.html/ to local function app
+[info] [hosting] Rewriting /404.html/ to local function app
+[info] [hosting] Rewriting /404.html/ to local function app
+[info] [hosting] Rewriting /404.html/ to local function app
+[info] [hosting] Rewriting /404.html/ to local function app
+[info] [hosting] Rewriting /404.html/ to local function app
+[info] [hosting] Rewriting /404.html/ to local function app
+[info] [hosting] Rewriting /404.html/ to local function app
+[info] [hosting] Rewriting /404.html/ to local function app
+[info] [hosting] Rewriting /404.html/ to local function app
+[info] [hosting] Rewriting /404.html/ to local function app
+[info] [hosting] Rewriting /404.html/ to local function app
+[info] [hosting] Rewriting /404.html/ to local function app
+[info] [hosting] Rewriting /404.html/ to local function app
+[info] [hosting] Rewriting /404.html/ to local function app
+[info] [hosting] Rewriting /404.html/ to local function app
+[info] [hosting] Rewriting /index.html/ to local function app
+[info] [hosting] Rewriting /404.html/ to local function app
+[info] [hosting] Rewriting /404.html/ to local function app
+[info] [hosting] Rewriting /404.html/ to local function app
+[info] [hosting] Rewriting /404.html/ to local function app
+[info] [hosting] Rewriting /404.html/ to local function app
+[info] [hosting] Rewriting /404.html/ to local function app
+[info] [hosting] Rewriting /404.html/ to local function app
+[info] [hosting] Rewriting /404.html/ to local function app
+[info] [hosting] Rewriting /404.html/ to local function app
+[info] [hosting] Rewriting /404.html/ to local function app
+[info] [hosting] Rewriting /404.html/ to local function app
+[info] [hosting] Rewriting /404.html/ to local function app
+[info] [hosting] Rewriting /404.html/ to local function app
+[info] [hosting] Rewriting /404.html/ to local function app
+[info] [hosting] Rewriting /404.html/ to local function app
+[info] [hosting] Rewriting /404.html/ to local function app
+[info] [hosting] Rewriting /404.html/ to local function app
+[info] [hosting] Rewriting /404.html/ to local function app
+[info] [hosting] Rewriting /404.html/ to local function app
+[info] [hosting] Rewriting /404.html/ to local function app
+[info] [hosting] Rewriting /404.html/ to local function app
+[info] [hosting] Rewriting /404.html/ to local function app
+[info] Shutting down...
