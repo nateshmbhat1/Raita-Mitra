@@ -484,46 +484,51 @@
                                    <option value="phone">Phone No</option>
                                 </select> -->
                             </div>
-							<table
-								class="table m-t-30 table-hover color-bordered-table inverse-bordered-table"
-								id="editable-datatable">
-								<thead>
-									<tr>
-
-										<th>Sample No</th>
-										<th> Farmer Name</th>
-										<th>Phone No.</th>
-
-										<th>Status</th>
+                            
+                            <div id="untestedSoilContainedTable" style="height:400px;overflow:auto ; ">
 
 
-									</tr>
-								</thead>
-								<tbody id="untested_soil_data_entries">
+                                <table
+                                    class="table m-t-30 table-hover table-striped color-bordered-table inverse-bordered-table"
+                                    id="editable-datatable">
+                                    <thead>
                                         <tr>
-                                            <td> 1</td>
-                                            <td><a href="javascript: void(0);" target="_blank" data-toggle="modal" data-id="1"data-target="#addDetails">Nigam</a></td>
-                                            <td>9999123123</td>
-                                           <td><span class="label label-danger">pending</span></td>
+    
+                                            <th>Sample No</th>
+                                            <th> Farmer Name</th>
+                                            <th>Phone No.</th>
+    
+                                            <th>Status</th>
+    
+    
                                         </tr>
-
-                                        <tr>
-                                            <td>2</td>
-                                            <td>Deshmukh</td>
-                                            <td>9999123123</td>
-                                            <td><span class="label label-danger">pending</span></td>
-                                        </tr>
-                                        <tr>
-                                            <td>3</td>
-                                            <td>Roshan</td>
-                                            <td>9999123123</td>
-                                            <td><span class="label label-danger">pending</span></td>
-                                        </tr>
-
-								</tbody>
-
-							</table>
-						</div>
+                                    </thead>
+                                    <tbody id="untested_soil_data_entries">
+                                            <tr>
+                                                <td> 1</td>
+                                                <td><a href="javascript: void(0);" target="_blank" data-toggle="modal" data-id="1"data-target="#addDetails">Nigam</a></td>
+                                                <td>9999123123</td>
+                                               <td><span class="label label-danger">pending</span></td>
+                                            </tr>
+    
+                                            <tr>
+                                                <td>2</td>
+                                                <td>Deshmukh</td>
+                                                <td>9999123123</td>
+                                                <td><span class="label label-danger">pending</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td>3</td>
+                                                <td>Roshan</td>
+                                                <td>9999123123</td>
+                                                <td><span class="label label-danger">pending</span></td>
+                                            </tr>
+    
+                                    </tbody>
+    
+                                </table>
+                            </div>
+                            </div>
 					</div>
 
                 </div>
@@ -545,7 +550,7 @@
 
                     <div class="form-group">
                         <label class="control-label">SampleNumber</label>
-                        <input class="form-control" type="text" id="sampleno">
+                        <input class="form-control" type="text" readonly disabled id="sampleno">
                     </div>
                     <div class="form-group">
                         <label class="control-label">Phone number</label>
@@ -734,7 +739,6 @@
   						function(e) {
 
   							var sampleID = $(e.relatedTarget).data('id');
-
 
   							/* Set the var to the inner html */
   							document.getElementById('sampleno').value = sampleID;

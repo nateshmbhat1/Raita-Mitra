@@ -44,7 +44,7 @@ module.exports = function Handle_requests(app)
 
 
 	app.post('/updateSampleDetails' , (req ,res)=>{
-		ref = admin.database().ref('/Soil Sample' + req.body.sample_no) ;
+		ref = admin.database().ref('/Soil Sample' + req.body.sampleno) ;
 		data = ref.body ; 
 		delete data.sample_no ; 
 		delete data.collected_data ; 	

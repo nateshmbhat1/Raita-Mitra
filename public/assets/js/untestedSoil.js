@@ -23,8 +23,8 @@ ref.once('value', snap=>{
     
     $('#untested_soil_data_entries').append(`
     <tr>
-      <td>${index+1}</td>
-      <td><a href="javascript: void(0);" target="_blank" data-toggle="modal" data-target="#addDetails">${"NAME"}</a></td>
+      <td>${sample_no}</td>
+      <td><a href="javascript: void(0);" target="_blank" data-toggle="modal" data-id=${sample_no} data-target="#addDetails">${"NAME"}</a></td>
       <td>${data.phone}</td>
       ${(data.status=="pending")?`<td><span class="label label-danger">pending</span></td></tr>
     `:`<td><span class="label label-success">completed</span></td>`}
