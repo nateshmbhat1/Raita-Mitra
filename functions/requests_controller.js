@@ -43,15 +43,17 @@ module.exports = function Handle_requests(app)
 	})
 
 
-	app.post('/updateSampleDetails' , (req ,res)=>{
+	app.post('/updateSampleDetails' ,urlencodedParser , (req ,res)=>{
 		console.log(req.body) ; 
 		//TODO : validate the post request 
-		ref = admin.database().ref('/Soil Sample' + req.body.sampleno) ;
-		data = ref.body ; 
+		ref = admin.database().ref('/Soil Sample/' + req.body.sampleno) ;
+
+		data = req.body ; 
 		delete data.sample_no ; 
 		delete data.collected_data ; 	
 
-		data.status = "completed" ; 
+		// data.status = "completed" ; 
+		console.log("Data is : ") ; 
 		console.log(data) ;
 		ref.update(data) ; 
 
