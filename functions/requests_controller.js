@@ -45,6 +45,7 @@ module.exports = function Handle_requests(app)
 
 	app.post('/updateSampleDetails' , (req ,res)=>{
 		console.log(req.body) ; 
+		//TODO : validate the post request 
 		ref = admin.database().ref('/Soil Sample' + req.body.sampleno) ;
 		data = ref.body ; 
 		delete data.sample_no ; 
@@ -52,8 +53,7 @@ module.exports = function Handle_requests(app)
 
 		data.status = "completed" ; 
 		console.log(data) ;
-		ref.set(data) ; 
-
+		ref.update(data) ; 
 
 		console.log("updated to firebase database") ;
 		res.status(200).redirect('UntestedSoil.html') ;
