@@ -6,12 +6,12 @@ const urlencodedParser =bodyparser.urlencoded({extended : true}) ;
 // const gethandler = require("gethandler") ;
 
 
-var serviceAccount = require("C:/Users/Natesh/Documents/raita-mitra-2018-firebase-adminsdk (acnt nateshmbhat1).json");
+var serviceAccount = require("./service account key/kisanmitra-3895b-firebase-adminsdk-g1jpi-c9f3a5f70e.json");
 
 
 admin.initializeApp({
   credential: admin.credential.cert(serviceAccount),
-  databaseURL: "https://raita-mitra-2018.firebaseio.com"
+  databaseURL: "https://kisanmitra-3895b.firebaseio.com"
 });
 
 
