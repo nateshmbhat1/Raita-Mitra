@@ -1,6 +1,5 @@
 const admin = require("firebase-admin") ; 
 const bodyparser = require("body-parser") ; 
-const app = require("express")() ; 
 const urlencodedParser =bodyparser.urlencoded({extended : true}) ;
 // const posthandler = require("posthandler") ;
 // const gethandler = require("gethandler") ;
