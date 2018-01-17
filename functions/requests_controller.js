@@ -61,7 +61,6 @@ module.exports = function Handle_requests(app)
 	app.get('/TestedSamples.html' , (req, res)=>{
 		res.sendFile(__dirname+'/views/TestedSamples.html'); 
 	})
-
 	
 	app.get('/faq.html' , (req, res)=>{
 		res.sendFile(__dirname+'/views/faq.html'); 
