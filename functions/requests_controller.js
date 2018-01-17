@@ -35,15 +35,15 @@ module.exports = function Handle_requests(app)
 	console.log('Request Handler started ! ') ;
 
 	app.get('/' , (req , res)=>{
-		res.redirect('index3.html')
+		res.redirect('index.html')
 	})
 
 	app.get('/home' , (req , res)=>{
-		res.redirect('index3.html') ; 
+		res.redirect('index.html') ; 
 	})
 
-	app.get('/login' , (req, res)=>{
-		res.sendFile(__dirname+'/views/login.html') ;
+	app.get('/dashboard.html' , (req, res)=>{
+		res.sendFile(__dirname+'/views/dashboard.html') ;
 	})
 
 	app.get('/register.html' , (req, res)=>{

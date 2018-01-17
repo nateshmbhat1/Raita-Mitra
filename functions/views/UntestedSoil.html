@@ -10,7 +10,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <link rel="icon" type="image/png" sizes="16x16" href="/plugins/images/favicon.png">
-    <title>Ample Admin Template - The Ultimate Multipurpose admin template</title>
+    <title>Kisan Mitra</title>
     <!-- Bootstrap Core CSS -->
     <link href="bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Menu CSS -->
@@ -485,7 +485,7 @@
                                 </select> -->
                             </div>
                             
-                            <div id="untestedSoilContainedTable" style="height:400px;overflow:auto ; ">
+                            <div id="untestedSoilContainedTable" style="height:1000px;overflow:auto ; ">
 
 
                                 <table
@@ -732,15 +732,17 @@
           /* action on show of delete modal */
 
   		$('#addDetails')
-  				.on( 'show.bs.modal',
-  						function(e) {
+                  .on('show.bs.modal',
+
+                        function(e) {
 
                             var sampleID = $(e.relatedTarget).data('id');
+                            var modal = $(this)
+                            modal.find('.modal-title').text('Test sample : ' + sampleID)
+                            /* Set the var to the inner html */
+                            document.getElementById('sampleno').value = sampleID;
 
-  							/* Set the var to the inner html */
-  							document.getElementById('sampleno').value = sampleID;
-
-  						});
+                        });
   	</script>
     <!--Style Switcher -->
     <script src="/plugins/bower_components/styleswitcher/jQuery.style.switcher.js"></script>
