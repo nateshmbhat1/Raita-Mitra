@@ -7,8 +7,8 @@ const request_controller = require("./requests_controller") ;
 
 
 
-app.use(express.static('../public/')) ;
-app.use(express.static('../public/assets/')) ; 
+app.use(express.static('../public')) ;
+app.use(express.static('../public/assets')) ; 
 
 request_controller(app) ; 
 
