@@ -39,11 +39,36 @@ module.exports = function Handle_requests(app)
 	})
 
 	app.get('/home' , (req , res)=>{
-		res.redirect('/index3.html') ; 
+		res.redirect('index3.html') ; 
+	})
+
+	app.get('/login' , (req, res)=>{
+		res.sendFile(__dirname+'/views/login.html') ;
+	})
+
+	app.get('/register.html' , (req, res)=>{
+		res.sendFile(__dirname+'/views/register.html') ;
+	})
+
+	app.get('/UntestedSoil.html' , (req, res)=>{
+		res.sendFile(__dirname+'/views/UntestedSoil.html') ;
+	})
+	
+	app.get('/FarmerList.html' , (req, res)=>{
+		res.sendFile(__dirname+'/views/FarmerList.html'); 
+	})
+
+	app.get('/TestedSamples.html' , (req, res)=>{
+		res.sendFile(__dirname+'/views/TestedSamples.html'); 
+	})
+
+	
+	app.get('/faq.html' , (req, res)=>{
+		res.sendFile(__dirname+'/views/faq.html'); 
 	})
 
 
-	app.post('/updateSampleDetails' ,urlencodedParser , (req ,res)=>{
+	app.post('/' ,urlencodedParser , (req ,res)=>{
 		console.log(req.body) ; 
 		//TODO : validate the post request 
 		ref = admin.database().ref('/Soil Sample/' + req.body.sampleno) ;
