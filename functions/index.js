@@ -6,15 +6,14 @@ const functions = require("firebase-functions") ;
 const request_controller = require("./requests_controller") ; 
 
 
-
 app.use(express.static('../public')) ;
 app.use(express.static('../public/assets')) ; 
 
 request_controller(app) ; 
 
-app.use((req ,res , next)=>{
-    res.status(404).redirect('/404.html') ; 
-})
+// app.use((req ,res , next)=>{
+//     res.status(404).redirect('404.html') ; 
+// })
 
 app.listen(8000) ; 
 

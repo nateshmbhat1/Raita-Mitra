@@ -30,16 +30,17 @@ function validatePostBody(req , res , keys ){
 
 
 
+
 module.exports = function Handle_requests(app)
 {
 	console.log('Request Handler started ! ') ;
 
 	app.get('/' , (req , res)=>{
-		res.sendFile(__dirname + '/index.html') ; 
+		res.redirect('index3.html')
 	})
 
 	app.get('/home' , (req , res)=>{
-		res.sendFile(__dirname + '/index.html') ; 
+		res.redirect('/index3.html') ; 
 	})
 
 
