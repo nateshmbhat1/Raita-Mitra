@@ -21,6 +21,8 @@ ref.once('value', snap=>{
     data = obj[sample_no] ;
     console.log("value obtained !") ;
     console.log(data.status) ; 
+    if(data.status!="pending")
+      return ; 
     
     $('#untested_soil_data_entries').append(`
     <tr>

@@ -729,13 +729,13 @@
     <!-- Custom Theme JavaScript -->
     <script src="js/custom.min.js"></script>
     <script>
-  		/* action on show of delete modal */
+          /* action on show of delete modal */
+
   		$('#addDetails')
-  				.on(
-  						'show.bs.modal',
+  				.on( 'show.bs.modal',
   						function(e) {
 
-  							var sampleID = $(e.relatedTarget).data('id');
+                            var sampleID = $(e.relatedTarget).data('id');
 
   							/* Set the var to the inner html */
   							document.getElementById('sampleno').value = sampleID;
