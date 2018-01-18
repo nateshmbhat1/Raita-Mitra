@@ -1,5 +1,5 @@
 
-// firebase =  require("firebase") ; 
+// firebase =  require("firebase") ;
   // Initialize Firebase
   var config = {
     apiKey: "AIzaSyB-HyJyq5vB3kPf3rKYOtdQwpLmZX8v_PA",
@@ -20,27 +20,26 @@ ref.once('value', snap=>{
   Object.keys(obj).map((sample_no , index) =>{
     data = obj[sample_no] ;
     console.log("value obtained !") ;
-    console.log(data.status) ; 
-    
+    console.log(data.status) ;
+
     $('#untested_soil_data_entries').append(`
     <tr>
       <td>${sample_no}</td>
       <td><a href="javascript: void(0);" target="_blank" data-toggle="modal" data-id=${sample_no} data-target="#addDetails">${"NAME"}</a></td>
       <td>${data.phone}</td>
-      ${(data.status=="pending")?`<td><span class="label label-danger">pending</span></td></tr>
-    `:`<td><span class="label label-success">${data.status}</span></td>`}
+      ${(data.status=="pending")?`<td><span class="label label-danger">pending</span></td></tr>`}
       </tr>
-  `) ; 
+  `) ;
 
-   
+
   })
-  
+
 })
 
 
-//Funtion used to search the elements in the untested soil table 
+//Funtion used to search the elements in the untested soil table
 // function search_untested_soil_table(){
-//   // Declare variables 
+//   // Declare variables
 //   var input, filter, table, tr, td, i;
 //   input = document.getElementById("search_untested_soil_table");
 //   filter = input.value.toUpperCase();
@@ -49,18 +48,18 @@ ref.once('value', snap=>{
 
 //   // Loop through all table rows, and hide those who don't match the search query
 //   for (i = 0; i < tr.length; i++) {
-//     td = tr[i].getElementsByTagName("td") ; 
+//     td = tr[i].getElementsByTagName("td") ;
 //     for(j=0 ; j<td.length ; j++)
 //     {
 //       let tdata = td[j] ;
 //       if (tdata) {
 //         if (tdata.innerHTML.toUpperCase().indexOf(filter) > -1) {
 //           tr[i].style.display = "";
-//           break ; 
+//           break ;
 //         } else {
 //           tr[i].style.display = "none";
 //         }
-//       } 
+//       }
 //     }
 //   }
 // }
