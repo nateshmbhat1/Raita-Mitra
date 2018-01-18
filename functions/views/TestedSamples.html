@@ -15,7 +15,7 @@
 <link href="/assets/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
 <!-- Menu CSS -->
 <link href="/plugins/bower_components/sidebar-nav/dist/sidebar-nav.min.css" rel="stylesheet">
-
+<link rel="stylesheet" href="/plugins/bower_components/jquery-datatables-editable/datatables.css" />
 <!-- chartist CSS -->
 <link href="/plugins/bower_components/chartist-js/dist/chartist.min.css" rel="stylesheet">
 <link href="/plugins/bower_components/chartist-plugin-tooltip-master/dist/chartist-plugin-tooltip.css" rel="stylesheet">
@@ -189,12 +189,13 @@
      <script src="/plugins/bower_components/datatables/dataTables.bootstrap.js"></script>
      <script src="/plugins/bower_components/tiny-editable/mindmup-editabletable.js"></script>
      <script src="/plugins/bower_components/tiny-editable/numeric-input-example.js"></script>
-	<script>
-		$('#editable-datatable').editableTableWidget().numericInputExample().find('td:first').focus();
-        $(document).ready(function () {
-            $('#editable-datatable').DataTable();
-        });
-		</script>
+     <script>
+         $('#mainTable').editableTableWidget().numericInputExample().find('td:first').focus();
+         $('#editable-datatable').editableTableWidget().numericInputExample().find('td:first').focus();
+         $(document).ready(function () {
+             $('#editable-datatable').DataTable();
+         });
+     </script>
     <!--Style Switcher -->
     <script src="/plugins/bower_components/styleswitcher/jQuery.style.switcher.js"></script>
     <script src="/assets/js/testedsoil.js"></script>

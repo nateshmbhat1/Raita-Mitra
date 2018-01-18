@@ -25,6 +25,7 @@
 <link href="/assets/css/animate.css" rel="stylesheet">
 <!-- Custom CSS -->
 <link href="/assets/css/style.css" rel="stylesheet">
+<link rel="stylesheet" href="/plugins/bower_components/jquery-datatables-editable/datatables.css" />
 <!-- color CSS -->
 <link href="/assets/css/colors/megna-dark.css" id="theme" rel="stylesheet">
 <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -343,14 +344,13 @@
      <script src="/plugins/bower_components/datatables/dataTables.bootstrap.js"></script>
      <script src="/plugins/bower_components/tiny-editable/mindmup-editabletable.js"></script>
      <script src="/plugins/bower_components/tiny-editable/numeric-input-example.js"></script>
-	<script>
-		$('#mainTable').editableTableWidget().numericInputExample().find(
-				'td:first').focus();
-
-		$(document).ready(function() {
-			$('#editable-datatable').DataTable();
-		});
-		</script>
+     <script>
+         $('#mainTable').editableTableWidget().numericInputExample().find('td:first').focus();
+         $('#editable-datatable').editableTableWidget().numericInputExample().find('td:first').focus();
+         $(document).ready(function () {
+             $('#editable-datatable').DataTable();
+         });
+     </script>
     <!--Style Switcher -->
     <script src="/plugins/bower_components/styleswitcher/jQuery.style.switcher.js"></script>
 </body>
