@@ -1,5 +1,5 @@
-const admin = require("firebase-admin") ; 
-const bodyparser = require("body-parser") ; 
+const admin = require("firebase-admin") ;
+const bodyparser = require("body-parser") ;
 const urlencodedParser =bodyparser.urlencoded({extended : true}) ;
 // const posthandler = require("posthandler") ;
 // const gethandler = require("gethandler") ;
@@ -20,11 +20,11 @@ function validatePostBody(req , res , keys ){
     for(i in keys){
         if(!(keys[i] in req.body))
         {
-            console.log("invalid post request returning ! ") ; 
-            return false ; 
+            console.log("invalid post request returning ! ") ;
+            return false ;
         }
     }
-    return true ; 
+    return true ;
 }
 
 
@@ -39,7 +39,7 @@ module.exports = function Handle_requests(app)
 	})
 
 	app.get('/home' , (req , res)=>{
-		res.redirect('index.html') ; 
+		res.redirect('index.html') ;
 	})
 
 	app.get('/dashboard.html' , (req, res)=>{
@@ -53,33 +53,33 @@ module.exports = function Handle_requests(app)
 	app.get('/UntestedSoil.html' , (req, res)=>{
 		res.sendFile(__dirname+'/views/UntestedSoil.html') ;
 	})
-	
+
 	app.get('/FarmerList.html' , (req, res)=>{
-		res.sendFile(__dirname+'/views/FarmerList.html'); 
+		res.sendFile(__dirname+'/views/FarmerList.html');
 	})
 
 	app.get('/TestedSamples.html' , (req, res)=>{
-		res.sendFile(__dirname+'/views/TestedSamples.html'); 
+		res.sendFile(__dirname+'/views/TestedSamples.html');
 	})
-	
+
 	app.get('/faq.html' , (req, res)=>{
-		res.sendFile(__dirname+'/views/faq.html'); 
+		res.sendFile(__dirname+'/views/faq.html');
 	})
 
 
 	app.post('/' ,urlencodedParser , (req ,res)=>{
-		console.log(req.body) ; 
-		//TODO : validate the post request 
+		console.log(req.body) ;
+		//TODO : validate the post request
 		ref = admin.database().ref('/Soil Sample/' + req.body.sampleno) ;
 
-		data = req.body ; 
-		delete data.sample_no ; 
-		delete data.collected_data ; 	
+		data = req.body ;
+		delete data.sample_no ;
+		delete data.collected_data ;
 
-		// data.status = "completed" ; 
-		console.log("Data is : ") ; 
+		// data.status = "completed" ;
+		console.log("Data is : ") ;
 		console.log(data) ;
-		ref.update(data) ; 
+		ref.update(data) ;
 
 		console.log("updated to firebase database") ;
 		res.status(200).redirect('UntestedSoil.html') ;
@@ -89,37 +89,57 @@ module.exports = function Handle_requests(app)
 
 
 	app.post('/addTestSample', urlencodedParser ,(req , res)=>{
-		if(!validatePostBody(req , res , ['phone' ,'survey_num' , 'khasra_num' , 'irrigated' , 'position' , 'farm_size'])) return ;  
+		if(!validatePostBody(req , res , ['phone' ,'survey_num' , 'khasra_num' , 'irrigated' , 'position' , 'farm_size'])) return ;
 
-		ref = admin.database().ref('/Soil Sample/' + req.body.survey_num) ; 
+		ref = admin.database().ref('/Soil Sample/' + req.body.survey_num) ;
 
-		data = req.body ; 
-		today = new Date() ; 
-		data.collected_data =  today.toDateString() ; 
+		data = req.body ;
+		today = new Date() ;
+		data.collected_data =  today.toDateString() ;
 		delete data.survey_num ;
-		
-		[ "pH" , "nitrogen" , "phosphorus" , "potassium" , "cropSuggested" , "fertilizerComb1" , "fertilizerComb2","EC", 
+
+		[ "pH" , "nitrogen" , "phosphorus" , "potassium" , "cropSuggested" , "fertilizerComb1" , "fertilizerComb2","EC",
 		"sulphur" , "zinc" , "boron" , "iron" , "manganese" , "copper"].forEach(ele=>{
-			data[ele] = '' ; 
+			data[ele] = '' ;
 		})
-		data.status = "pending" ; 
+		data.status = "pending" ;
 
 		console.log(data) ;
-		ref.set(data) ; 
+		ref.set(data) ;
 
 
 		console.log("Added to firebase database") ;
 		res.status(200).redirect('index3.html') ;
-		
+
 		admin.messaging().sendToTopic('global' , {
 			notification : {
 				title : 'Farmer Project' ,
 				body : 'notification body'
-			} , 
+			} ,
 			data : {
 				nitrogen : req.body.nitrogen
 			}
 		})
+
+	} )
+  app.post('/addQuery', urlencodedParser ,(req , res)=>{
+		if(!validatePostBody(req , res , ['qestion' ,'answer'])) return ;
+
+		ref = admin.database().ref('/Query').push() ;
+
+		data = req.body ;
+
+
+
+
+		console.log(data) ;
+		ref.set(data) ;
+
+
+		console.log("Added to firebase database") ;
+		res.status(200).redirect('faq.html') ;
+
+
 
 	} )
 
