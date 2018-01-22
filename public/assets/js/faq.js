@@ -29,7 +29,12 @@ Object.keys(obj).map((key , index) =>{
     </tr>
 `) ;
 
-
 })
+
+$('#mainTable').editableTableWidget().numericInputExample().find('td:first').focus();
+// $('#editable-datatable').editableTableWidget().numericInputExample().find('td:first').focus(); //This makes the table editable
+$(document).ready(function () {
+    $('#editable-datatable').DataTable();
+});
 
 })

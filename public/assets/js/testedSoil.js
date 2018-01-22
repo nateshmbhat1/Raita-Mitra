@@ -33,15 +33,19 @@ ref.once('value', snap=>{
     `:`<td><span class="label label-success">${data.status}</span></td>`}
       </tr>
   `) ; 
-
    
   })
+  $('#mainTable').editableTableWidget().numericInputExample().find('td:first').focus();
+  // $('#editable-datatable').editableTableWidget().numericInputExample().find('td:first').focus(); //This makes the table editable
+  $(document).ready(function () {
+      $('#editable-datatable').DataTable();
+  });
   
 })
 
 
 //Funtion used to search the elements in the untested soil table 
-function search_untested_soil_table(){
+function search_tested_soil_table(){
   // Declare variables 
   var input, filter, table, tr, td, i;
   input = document.getElementById("search_tested_soil_table");

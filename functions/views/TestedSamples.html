@@ -172,7 +172,7 @@
 							<!-- <h3 class="box-title">Employees Details in Database</h3> -->
                             <p class="text-muted"></p>
                             <div class="form-group">
-                                <input type="text" style="font-size:16px;" class="form-control" id="search_untested_soil_table" onkeyup="search_tested_soil_table()" placeholder="Search for Name :">
+                                <input type="text" style="font-size:16px;" class="form-control" id="search_tested_soil_table" onkeyup="search_tested_soil_table()" placeholder="Search for Name :">
 
                             </div>
 							<table
@@ -303,13 +303,7 @@
     <script src="/plugins/bower_components/datatables/dataTables.bootstrap.js"></script>
     <script src="/plugins/bower_components/tiny-editable/mindmup-editabletable.js"></script>
     <script src="/plugins/bower_components/tiny-editable/numeric-input-example.js"></script>
-    <script>
-        $('#mainTable').editableTableWidget().numericInputExample().find('td:first').focus();
-        $('#editable-datatable').editableTableWidget().numericInputExample().find('td:first').focus();
-        $(document).ready(function () {
-            $('#editable-datatable').DataTable();
-        });
-    </script>
+  
     <!--Style Switcher -->
     <script src="/plugins/bower_components/styleswitcher/jQuery.style.switcher.js"></script>
     <script src="https://www.gstatic.com/firebasejs/4.8.2/firebase.js"></script>
