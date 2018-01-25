@@ -124,8 +124,11 @@ module.exports = function Handle_requests(app)
 	} )
   app.post('/addQuery', urlencodedParser ,(req , res)=>{
 		if(!validatePostBody(req , res , ['qestion' ,'answer'])) return ;
+    console.log("qestion is: "+ req.body.qestion);
+    today = new Date();
 
-		ref = admin.database().ref('/Query').push() ;
+		ref = admin.database().ref('/Query/'+ today.toDateString()) ;
+    console.log("date is : "+ today.toDateString());
 
 		data = req.body ;
 
