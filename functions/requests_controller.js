@@ -125,10 +125,10 @@ module.exports = function Handle_requests(app)
   app.post('/addQuery', urlencodedParser ,(req , res)=>{
 		if(!validatePostBody(req , res , ['qestion' ,'answer'])) return ;
     console.log("qestion is: "+ req.body.qestion);
-    today = new Date();
+    today = new Date().getMilliseconds().toString();
 
-		ref = admin.database().ref('/Query/'+ today.toDateString()) ;
-    console.log("date is : "+ today.toDateString());
+		ref = admin.database().ref('/Query/'+ today) ;
+    console.log("date is : "+ today);
 
 		data = req.body ;
 
@@ -140,6 +140,7 @@ module.exports = function Handle_requests(app)
 
 
 		console.log("Added to firebase database") ;
+		//res.sendFile(__dirname+'/views/faq.html');
 		res.status(200).redirect('faq.html') ;
 
 

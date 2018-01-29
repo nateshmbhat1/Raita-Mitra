@@ -14,19 +14,25 @@ ref = firebase.database().ref('/Query') ;
 console.log("This is doing ! ") ;
 ref.once('value', snap=>{
 obj = snap.val() ;
+var i =1;
 Object.keys(obj).map((key , index) =>{
-  var i =1;
+  i = i +1;
   data = obj[key] ;
   console.log("value obtained !") ;
   console.log(data.qestion) ;
-
+  var heado = "heading" + i.toString();
+  var collapse = "collapse"+ i.toString();
+  console.log(heado);
   $('#questionanswerentries').append(`
-  <tr>
-    <td>${i++}</td>
-    <td>${data.qestion}</td>
-    <td>${data.answer}</td>
+  <div class="panel panel-default">
+  <div class="panel-heading" role="tab" id="${heado}">
+      <h4 class="panel-title"> <a role="button" data-toggle="collapse" data-parent="#accordion" href="#${collapse}" aria-expanded="true" aria-controls="${collapse}" class="font-bold"> ${data.qestion} </a> </h4> </div>
+  <div id="${collapse}" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="${heado}">
+      <div class="panel-body"> ${data.answer}</div>
 
-    </tr>
+  </div>
+</div>
+
 `) ;
 
 })
