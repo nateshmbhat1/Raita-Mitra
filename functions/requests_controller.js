@@ -111,6 +111,9 @@ module.exports = function Handle_requests(app)
 		console.log("Added to firebase database") ;
 		res.status(200).redirect('dashboard.html') ;
 
+
+		
+
 		admin.messaging().sendToTopic('global' , {
 			notification : {
 				title : 'Farmer Project' ,

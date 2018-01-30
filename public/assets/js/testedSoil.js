@@ -12,7 +12,6 @@
 firebase.initializeApp(config);
 
 
-
 ref = firebase.database().ref('/Soil Sample') ;
 console.log("This is doing ! ") ;
 ref.once('value', snap=>{

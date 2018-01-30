@@ -38,12 +38,12 @@
         
         <div class="form-group m-t-40">
           <div class="col-xs-12">
-            <input class="form-control" type="text" required="" placeholder="Username">
+            <input class="form-control" type="text" required="" placeholder="email" id="email">
           </div>
         </div>
         <div class="form-group">
           <div class="col-xs-12">
-            <input class="form-control" type="password" required="" placeholder="Password">
+            <input class="form-control" type="password" required="" placeholder="Password" id="password">
           </div>
         </div>
         <div class="form-group">
@@ -92,6 +92,22 @@
   </div>
 </section>
 <!-- jQuery -->
+<script>
+    var email = document.getElementById('email').value;
+    var password = document.getElementById('password').value;
+
+// firebase.auth().signInWithEmailAndPassword(email, password).catch(function(error) {
+//     // Handle Errors here.
+//     var errorCode = error.code;
+//     var errorMessage = error.message;
+//     if (errorCode === 'auth/wrong-password') {
+//             alert('Wrong password.');
+//           } else {
+//             alert(errorMessage);
+//           }
+//     // ...
+//   });
+  </script>
 <script src="/plugins/bower_components/jquery/dist/jquery.min.js"></script>
 <!-- Bootstrap Core JavaScript -->
 <script src="/assets/bootstrap/dist/js/bootstrap.min.js"></script>
