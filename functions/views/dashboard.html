@@ -155,18 +155,126 @@
             <div class="container-fluid">
                 <div class="row bg-title">
                     <div class="col-lg-3 col-md-4 col-sm-4 col-xs-12">
-                        <h4 class="page-title">Dashboard 3</h4> </div>
-                    <div class="col-lg-9 col-sm-8 col-md-8 col-xs-12"> <button class="right-side-toggle waves-effect waves-light btn-info btn-circle pull-right m-l-20"><i class="ti-settings text-white"></i></button>
+                        <h4 class="page-title">Home</h4> </div>
+                    <div class="col-lg-9 col-sm-8 col-md-8 col-xs-12"> 
+                        
+                        
+                        <button class="right-side-toggle waves-effect waves-light btn-info btn-circle pull-right m-l-20"><i class="ti-settings text-white"></i></button>
                         						<a href="javascript: void(0);" target="_blank"
 							class="btn btn-danger pull-right m-l-20 hidden-xs hidden-sm waves-effect waves-light"
 							data-toggle="modal" data-target="#addSoil">Add new Test Sample</a>
 
-
+                            <a href="javascript: void(0);" target="_blank" class="btn btn-primary pull-right m-l-20 hidden-xs hidden-sm waves-effect waves-light"
+                            data-toggle="modal" data-target="#farmAdvisaryForm">Add Farm Advisary Statistics</a>
                     </div>
                     <!-- /.col-lg-12 -->
 
                 </div>
-				<!-- ============================================================== -->
+                <!-- ============================================================== -->
+                <!-- Modal to add the Farm Advisary -->
+                <div class="modal fade" id="farmAdvisaryForm">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="close" style="color : red ; " data-dismiss="modal" aria-hidden="true">&times;</button>
+                                    <div class="text-center">
+                                        <h4 class="modal-title">Farm Advisory Statistics</h4>
+                                    </div>
+                                </div>
+                                <div class="modal-body">
+                                    <form method="post" action="advisoryStatistics" id="form_advisoryForm">
+                                        
+                                            <div class="form-group">
+                                                    <label class="control-label">Email-address</label>
+                                                    <input class="form-control input-lg" type="email" name="email">
+                                                </div>
+                                                <div class="form-group">
+                                                    <label class="control-label">Farmer Name</label>
+                                                    <input type="text" name="name" required  class="form-control input-lg" />
+                                                </div>
+                                                <div class="form-group">
+                                                    <label class="control-label">District</label>
+                                                            <select class="form-control" name="district">
+                                                                <option value="Davanagere">Davanagere</option>
+                                                                <option value="Shivamogga">Shivamogga</option>
+                                                                <option value="Chitradurga">Chitradurga</option>
+                                                                <option value="Ballary">Ballary </option>
+                                                                <option value="Chikkamagaluru">Chikkamagaluru</option>
+                                                            </select>
+                                                </div>
+    
+                                                <div class="form-group">
+                                                    <label class="control-label">District</label>
+                                                            <select class="form-control" name="taluk" >
+                                                                <option value="Davangere">Davangere</option>
+                                                                <option value="Honnali">Honnali</option>
+                                                                <option value="Harihara">Harihara</option>
+                                                                <option value="Channagiri">Channagiri</option>
+                                                                <option value="Harapanahalli">Harapanahalli</option>
+                                                                <option value="Jagaluru">Jagaluru</option>
+                                                            </select>
+                                                </div>
+    
+     
+                                                <div class="form-group">
+                                                    <label class="control-label">Hobali</label>
+                                                    <input type="text" name="hobali" required class="form-control input-lg" />
+                                                </div>
+                                                <div class="form-group">
+                                                    <label class="control-label">Village</label>
+                                                    <input type="text" name="village" required class="form-control input-lg" />
+                                                </div>
+                                                <div class="form-group">
+                                                    <label class="control-label">Aadhaar No</label>
+                                                    <input type="text" name="aadhaar" required placeholder="12893823434" class="form-control input-lg" />
+                                                </div>
+                                                <div class="form-group">
+                                                        <label class="control-label">Phone Number</label>
+                                                        <input type="number" name="phone" required placeholder="9441234567" class="form-control input-lg" id="phone" />
+                                                </div>
+    
+                                                <div class="form-group">
+                                                    <label class="control-label">Category</label>
+                                                    <select class="form-control" name="category" id="select_category">
+                                                            <option value="SC">SC</option>
+                                                            <option value="ST">ST</option>
+                                                            <option value="General">General</option>
+                                                        </select>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label class="control-label">Mode of Contact</label>
+                                                    <select name="modeofcontact" class="form-control" id="select_modeOfContact">
+                                                        <option value="kvk">KVK</option>
+                                                        <option value="phone">Via Phone</option>
+                                                    </select>
+                                                </div>
+            
+                                                <div class="form-group">
+                                                        <label class="control-label">Crop/Enterprise</label>
+                                                        <input type="text" name="croporenterprise" required class="form-control input-lg"  />
+                                                </div>
+    
+                                                <div class="form-group">
+    
+                                                        <label class="control-label">Problems</label>
+                                                        <textarea class="form-control input-lg" name="problems" id="textarea_problems" cols="30" rows="6"></textarea>
+                                                </div>
+    
+                                                <div class="form-group">
+                                                        <label class="control-label">Suggestions given to Farmer</label>
+                                                        <textarea class="form-control input-lg" name="suggestions" id="textarea_suggestions" cols="30" rows="7"></textarea>
+                                                    </div>
+    
+                                                <div id="div_submit" class="text-center">
+                                                    <button class="btn btn-success btn-lg" type="submit">Submit </button>
+                                                </div>
+                                    </form>
+                                    
+                                </div>
+                        </div>
+                    </div>
+                    </div>
+                <!-- End of Modal Farm Advisary -->
                 <!-- Modal to add the test sample -->
 				<div class="modal fade" id="addSoil" tabindex="-1" role="dialog"
 					aria-labelledby="myModalLabel">
@@ -239,11 +347,11 @@
                             </div>
                             <div class="col-lg-3 col-sm-6 col-xs-12">
                                 <div class="white-box">
-                                    <h3 class="box-title">Registered Farmers</h3>
+                                    <h3 class="box-title">Advisary Statistics</h3>
 									<a href="./FarmerList.html">
                                     <ul class="list-inline two-part">
                                         <li><i class="icon-folder text-purple"></i></li>
-                                        <li class="text-right"><span class="counter">169</span></li>
+                                        <li class="text-right"><span class="counter">7</span></li>
                                     </ul>
 									</a>
                                 </div>

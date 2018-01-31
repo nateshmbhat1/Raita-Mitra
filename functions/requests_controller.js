@@ -86,6 +86,18 @@ module.exports = function Handle_requests(app)
 
 
 	})
+	app.post('/advisoryStatistics' , urlencodedParser , (req, res)=>{
+		//TODO : validate the post request 
+		if(!validatePostBody(req , res , ['email' ,'name' , 'district' , 'taluk' , 'hobali' , 'village','aadhaar','phone','category','modeofcontact','problems','suggestions'])) return ;
+		ref = admin.database().ref('/Farm Advisory Statistics').push() ; 
+		data = req.body ; 
+		delete data.aadhaar ; 
+
+		console.log("data is " , data) ; 
+		ref.update(data) ; 
+		console.log("updated " ) ; 
+		res.status(200).redirect('dashboard.html') ;
+	})
 
 
 	app.post('/addTestSample', urlencodedParser ,(req , res)=>{
