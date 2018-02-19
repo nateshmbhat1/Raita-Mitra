@@ -4,35 +4,32 @@
 
 <!-- Mirrored from wrappixel.com/ampleadmin/ampleadmin-html/ampleadmin-sidebar/inbox.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 15 Jul 2017 12:44:19 GMT -->
 <head>
-  <meta charset="utf-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="">
-<meta name="author" content="">
-<link rel="icon" type="image/png" sizes="16x16" href="/plugins/images/favicon.png">
-<title>Kisan Mitra</title>
-<!-- Bootstrap Core CSS -->
-<link href="/assets/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
-<!-- Menu CSS -->
-<link href="/plugins/bower_components/sidebar-nav/dist/sidebar-nav.min.css" rel="stylesheet">
-
-<!-- chartist CSS -->
-<link href="/plugins/bower_components/chartist-js/dist/chartist.min.css" rel="stylesheet">
-<link href="/plugins/bower_components/chartist-plugin-tooltip-master/dist/chartist-plugin-tooltip.css" rel="stylesheet">
-<!-- Vector CSS -->
-<link href="/plugins/bower_components/vectormap/jquery-jvectormap-2.0.2.css" rel="stylesheet" />
-<!-- animation CSS -->
-<link href="/assets/css/animate.css" rel="stylesheet">
-<!-- Custom CSS -->
-<link href="/assets/css/style.css" rel="stylesheet">
-<link rel="stylesheet" href="/plugins/bower_components/jquery-datatables-editable/datatables.css" />
-<!-- color CSS -->
-<link href="/assets/css/colors/megna-dark.css" id="theme" rel="stylesheet">
-<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-<!--[if lt IE 9]>
-<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" type="image/png" sizes="16x16" href="/plugins/images/favicon.png">
+    <title>Kisan Mitra</title>
+    <!-- Bootstrap Core CSS -->
+    <link href="/assets/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Menu CSS -->
+    <link href="/plugins/bower_components/sidebar-nav/dist/sidebar-nav.min.css" rel="stylesheet">
+    <!-- morris CSS -->
+    <link href="/plugins/bower_components/morrisjs/morris.css" rel="stylesheet">
+    <!-- animation CSS -->
+    <link href="/assets/css/animate.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link href="/assets/css/style.css" rel="stylesheet">
+    <!-- color CSS -->
+    <link href="/assets/css/colors/megna-dark.css" id="theme" rel="stylesheet">
+    <link rel="stylesheet" href="/plugins/bower_components/jquery-datatables-editable/datatables.css" />
+    <link rel="stylesheet" href="/plugins/bower_components/datatables/jquery.dataTables.min.css" />
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
 <![endif]-->
 </head>
 
@@ -40,11 +37,7 @@
     <!-- ============================================================== -->
     <!-- Preloader -->
     <!-- ============================================================== -->
-    <div class="preloader">
-        <svg class="circular" viewBox="25 25 50 50">
-            <circle class="path" cx="50" cy="50" r="20" fill="none" stroke-width="2" stroke-miterlimit="10"/>
-        </svg>
-    </div>
+   
     <!-- ============================================================== -->
     <!-- Wrapper -->
     <!-- ============================================================== -->
@@ -82,7 +75,7 @@
                 <div class="sidebar-head">
                     <h3><span class="fa-fw open-close"><i class="ti-close ti-menu"></i></span> <span class="hide-menu">Navigation</span></h3> </div>
                 <ul class="nav" id="side-menu">
-                   <!-- <li class="user-pro">
+                   <li class="user-pro">
                         <a href="#" class="waves-effect"><img src="plugins/images/users/varun.jpg" alt="user-img" class="img-circle"> <span class="hide-menu"> Steve Gection<span class="fa arrow"></span></span>
                         </a>
                         <ul class="nav nav-second-level collapse" aria-expanded="false" style="height: 0px;">
@@ -92,7 +85,7 @@
                             <li><a href="javascript:void(0)"><i class="ti-settings"></i> <span class="hide-menu">Account Setting</span></a></li>
                             <li><a href="javascript:void(0)"><i class="fa fa-power-off"></i> <span class="hide-menu">Logout</span></a></li>
                         </ul>
-                    </li>-->
+                    </li>
                     <li> <a href="TestedSamples.html" class="waves-effect"><i class="mdi mdi-av-timer fa-fw" data-icon="v"></i> <span class="hide-menu">  Soil Samples <span class="fa arrow"></span> <span class="label label-rouded label-inverse pull-right">4</span></span></a>
 
                     </li>
@@ -152,7 +145,7 @@
                                         <th width="300">MANAGE</th>
                                     </tr>
                                 </thead>
-                                <tbody>
+                                <tbody id="farmerEntries">
                                     <tr>
                                         <td class="text-center">1</td>
                                         <td>Daniel Kristeen
@@ -178,131 +171,9 @@
                                             <button type="button" class="btn btn-info btn-outline btn-circle btn-lg m-r-20"><i class="ti-upload"></i></button>
                                         </td>
                                     </tr>
-                                    <tr>
-                                        <td class="text-center">2</td>
-                                        <td>Daniel Kristeen
-                                            <br/><span class="text-muted">Texas, Unitedd states</span></td>
-                                        <td>Visual Designer
-                                            <br/><span class="text-muted">Past : teacher</span></td>
-                                        <td>daniel@website.com
-                                            <br/><span class="text-muted">999 - 444 - 555</span></td>
-                                        <td>15 Mar 1988
-                                            <br/><span class="text-muted">10: 55 AM</span></td>
-                                        <td>
-                                            <select class="form-control">
-                                                <option>Modulator</option>
-                                                <option>Admin</option>
-                                                <option>User</option>
-                                                <option>Subscriber</option>
-                                            </select>
-                                        </td>
-                                        <td>
-                                            <button type="button" class="btn btn-info btn-outline btn-circle btn-lg m-r-5"><i class="ti-key"></i></button>
-                                            <button type="button" class="btn btn-info btn-outline btn-circle btn-lg m-r-5"><i class="ti-trash"></i></button>
-                                            <button type="button" class="btn btn-info btn-outline btn-circle btn-lg m-r-5"><i class="ti-pencil-alt"></i></button>
-                                            <button type="button" class="btn btn-info btn-outline btn-circle btn-lg m-r-20"><i class="ti-upload"></i></button>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td class="text-center">3</td>
-                                        <td>Daniel Kristeen
-                                            <br/><span class="text-muted">Texas, Unitedd states</span></td>
-                                        <td>Visual Designer
-                                            <br/><span class="text-muted">Past : teacher</span></td>
-                                        <td>daniel@website.com
-                                            <br/><span class="text-muted">999 - 444 - 555</span></td>
-                                        <td>15 Mar 1988
-                                            <br/><span class="text-muted">10: 55 AM</span></td>
-                                        <td>
-                                            <select class="form-control">
-                                                <option>Modulator</option>
-                                                <option>Admin</option>
-                                                <option>User</option>
-                                                <option>Subscriber</option>
-                                            </select>
-                                        </td>
-                                        <td>
-                                            <button type="button" class="btn btn-info btn-outline btn-circle btn-lg m-r-5"><i class="ti-key"></i></button>
-                                            <button type="button" class="btn btn-info btn-outline btn-circle btn-lg m-r-5"><i class="ti-trash"></i></button>
-                                            <button type="button" class="btn btn-info btn-outline btn-circle btn-lg m-r-5"><i class="ti-pencil-alt"></i></button>
-                                            <button type="button" class="btn btn-info btn-outline btn-circle btn-lg m-r-20"><i class="ti-upload"></i></button>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td class="text-center">4</td>
-                                        <td>Daniel Kristeen
-                                            <br/><span class="text-muted">Texas, Unitedd states</span></td>
-                                        <td>Visual Designer
-                                            <br/><span class="text-muted">Past : teacher</span></td>
-                                        <td>daniel@website.com
-                                            <br/><span class="text-muted">999 - 444 - 555</span></td>
-                                        <td>15 Mar 1988
-                                            <br/><span class="text-muted">10: 55 AM</span></td>
-                                        <td>
-                                            <select class="form-control">
-                                                <option>Modulator</option>
-                                                <option>Admin</option>
-                                                <option>User</option>
-                                                <option>Subscriber</option>
-                                            </select>
-                                        </td>
-                                        <td>
-                                            <button type="button" class="btn btn-info btn-outline btn-circle btn-lg m-r-5"><i class="ti-key"></i></button>
-                                            <button type="button" class="btn btn-info btn-outline btn-circle btn-lg m-r-5"><i class="ti-trash"></i></button>
-                                            <button type="button" class="btn btn-info btn-outline btn-circle btn-lg m-r-5"><i class="ti-pencil-alt"></i></button>
-                                            <button type="button" class="btn btn-info btn-outline btn-circle btn-lg m-r-20"><i class="ti-upload"></i></button>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td class="text-center">5</td>
-                                        <td>Daniel Kristeen
-                                            <br/><span class="text-muted">Texas, Unitedd states</span></td>
-                                        <td>Visual Designer
-                                            <br/><span class="text-muted">Past : teacher</span></td>
-                                        <td>daniel@website.com
-                                            <br/><span class="text-muted">999 - 444 - 555</span></td>
-                                        <td>15 Mar 1988
-                                            <br/><span class="text-muted">10: 55 AM</span></td>
-                                        <td>
-                                            <select class="form-control">
-                                                <option>Modulator</option>
-                                                <option>Admin</option>
-                                                <option>User</option>
-                                                <option>Subscriber</option>
-                                            </select>
-                                        </td>
-                                        <td>
-                                            <button type="button" class="btn btn-info btn-outline btn-circle btn-lg m-r-5"><i class="ti-key"></i></button>
-                                            <button type="button" class="btn btn-info btn-outline btn-circle btn-lg m-r-5"><i class="ti-trash"></i></button>
-                                            <button type="button" class="btn btn-info btn-outline btn-circle btn-lg m-r-5"><i class="ti-pencil-alt"></i></button>
-                                            <button type="button" class="btn btn-info btn-outline btn-circle btn-lg m-r-20"><i class="ti-upload"></i></button>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td class="text-center">6</td>
-                                        <td>Daniel Kristeen
-                                            <br/><span class="text-muted">Texas, Unitedd states</span></td>
-                                        <td>Visual Designer
-                                            <br/><span class="text-muted">Past : teacher</span></td>
-                                        <td>daniel@website.com
-                                            <br/><span class="text-muted">999 - 444 - 555</span></td>
-                                        <td>15 Mar 1988
-                                            <br/><span class="text-muted">10: 55 AM</span></td>
-                                        <td>
-                                            <select class="form-control">
-                                                <option>Modulator</option>
-                                                <option>Admin</option>
-                                                <option>User</option>
-                                                <option>Subscriber</option>
-                                            </select>
-                                        </td>
-                                        <td>
-                                            <button type="button" class="btn btn-info btn-outline btn-circle btn-lg m-r-5"><i class="ti-key"></i></button>
-                                            <button type="button" class="btn btn-info btn-outline btn-circle btn-lg m-r-5"><i class="ti-trash"></i></button>
-                                            <button type="button" class="btn btn-info btn-outline btn-circle btn-lg m-r-5"><i class="ti-pencil-alt"></i></button>
-                                            <button type="button" class="btn btn-info btn-outline btn-circle btn-lg m-r-20"><i class="ti-upload"></i></button>
-                                        </td>
-                                    </tr>
+                                   
+                                   
+                                    
                                 </tbody>
                             </table>
                         </div>
@@ -322,11 +193,12 @@
                 <!-- ============================================================== -->
             </div>
             <!-- /.container-fluid -->
-            <footer class="footer text-center"> 2017 &copy; Ample Admin brought to you by themedesigner.in </footer>
+            <footer class="footer text-center"> 2017 &copy; ViCaSiN Techies </footer>
         </div>
         <!-- /#page-wrapper -->
     </div>
     <!-- /#wrapper -->
+  
     <!-- jQuery -->
     <script src="/plugins/bower_components/jquery/dist/jquery.min.js"></script>
     <!-- Bootstrap Core JavaScript -->
@@ -339,20 +211,23 @@
     <script src="/assets/js/waves.js"></script>
     <!-- Custom Theme JavaScript -->
     <script src="/assets/js/custom.min.js"></script>
-     <!-- Editable -->
-     <script src="/plugins/bower_components/jquery-datatables-editable/jquery.dataTables.js"></script>
-     <script src="/plugins/bower_components/datatables/dataTables.bootstrap.js"></script>
-     <script src="/plugins/bower_components/tiny-editable/mindmup-editabletable.js"></script>
-     <script src="/plugins/bower_components/tiny-editable/numeric-input-example.js"></script>
-     <script>
-         $('#mainTable').editableTableWidget().numericInputExample().find('td:first').focus();
-         $('#editable-datatable').editableTableWidget().numericInputExample().find('td:first').focus();
-         $(document).ready(function () {
-             $('#editable-datatable').DataTable();
-         });
-     </script>
+    <!-- Editable -->
+    <script src="/plugins/bower_components/jquery-datatables-editable/jquery.dataTables.js"></script>
+    <script src="/plugins/bower_components/datatables/dataTables.bootstrap.js"></script>
+    <script src="/plugins/bower_components/tiny-editable/mindmup-editabletable.js"></script>
+    <script src="/plugins/bower_components/tiny-editable/numeric-input-example.js"></script>
+    <script>
+        $('#mainTable').editableTableWidget().numericInputExample().find('td:first').focus();
+        // $('#editable-datatable').editableTableWidget().numericInputExample().find('td:first').focus(); //This makes the table editable
+        $(document).ready(function () {
+            $('#editable-datatable').DataTable();
+        });
+    </script>
+
     <!--Style Switcher -->
     <script src="/plugins/bower_components/styleswitcher/jQuery.style.switcher.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/4.8.2/firebase.js"></script>
+    <script src="/assets/js/FAS.js"></script>
 </body>
 
 
