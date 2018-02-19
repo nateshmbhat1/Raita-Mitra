@@ -270,6 +270,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
                         <h4 class="page-title">Home</h4> </div>
                     <div class="col-lg-9 col-sm-8 col-md-8 col-xs-12"> 
                         
@@ -281,6 +282,8 @@
 =======
 =======
 >>>>>>> 6c0ecfd7577cb7479559e13d149be21abc7f501f
+=======
+>>>>>>> 6c0ecfd7577cb7479559e13d149be21abc7f501f
                         <h4 class="page-title">Dashboard 3</h4>
                     </div>
                     <div class="col-lg-9 col-sm-8 col-md-8 col-xs-12">
@@ -289,6 +292,7 @@
                         </button>
                         <a href="javascript: void(0);" target="_blank" class="btn btn-danger pull-right m-l-20 hidden-xs hidden-sm waves-effect waves-light"
                             data-toggle="modal" data-target="#addSoil">Add new Test Sample</a>
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 6c0ecfd7577cb7479559e13d149be21abc7f501f
 =======
@@ -311,7 +315,15 @@
 
                         <a href="javascript: void(0);" target="_blank" class="btn btn-primary pull-right m-l-20 hidden-xs hidden-sm waves-effect waves-light"
                             data-toggle="modal" data-target="#farmAdvisaryForm">Add Farm Advisary Statistics</a>
+=======
+>>>>>>> 6c0ecfd7577cb7479559e13d149be21abc7f501f
 
+>>>>>>> 6c0ecfd7577cb7479559e13d149be21abc7f501f
+=======
+                        <a href="javascript: void(0);" target="_blank" class="btn btn-primary pull-right m-l-20 hidden-xs hidden-sm waves-effect waves-light"
+                            data-toggle="modal" data-target="#farmAdvisaryForm">Add Farm Advisary Statistics</a>
+
+<<<<<<< HEAD
 >>>>>>> 6c0ecfd7577cb7479559e13d149be21abc7f501f
 =======
                         <a href="javascript: void(0);" target="_blank" class="btn btn-primary pull-right m-l-20 hidden-xs hidden-sm waves-effect waves-light"
@@ -327,6 +339,7 @@
                     <!-- /.col-lg-12 -->
 
                 </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -618,6 +631,109 @@
                                 
 >>>>>>> 6c0ecfd7577cb7479559e13d149be21abc7f501f
                             </div>
+=======
+
+                
+                <div class="modal fade" id="farmAdvisaryForm">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="close" style="color : red ; " data-dismiss="modal" aria-hidden="true">&times;</button>
+                                <div class="text-center">
+                                    <h4 class="modal-title">Farm Advisory Statistics</h4>
+                                </div>
+                            </div>
+                            <div class="modal-body">
+                                <form method="post" action="advisoryStatistics" id="form_advisoryForm">
+                                    
+                                        <div class="form-group">
+                                                <label class="control-label">Email-address</label>
+                                                <input class="form-control input-lg" type="email" name="email">
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="control-label">Farmer Name</label>
+                                                <input type="text" name="name" required  class="form-control input-lg" />
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="control-label">District</label>
+                                                        <select class="form-control" name="district">
+                                                            <option value="Davanagere">Davanagere</option>
+                                                            <option value="Shivamogga">Shivamogga</option>
+                                                            <option value="Chitradurga">Chitradurga</option>
+                                                            <option value="Ballary">Ballary </option>
+                                                            <option value="Chikkamagaluru">Chikkamagaluru</option>
+                                                        </select>
+                                            </div>
+
+                                            <div class="form-group">
+                                                <label class="control-label">District</label>
+                                                        <select class="form-control" name="taluk" >
+                                                            <option value="Davangere">Davangere</option>
+                                                            <option value="Honnali">Honnali</option>
+                                                            <option value="Harihara">Harihara</option>
+                                                            <option value="Channagiri">Channagiri</option>
+                                                            <option value="Harapanahalli">Harapanahalli</option>
+                                                            <option value="Jagaluru">Jagaluru</option>
+                                                        </select>
+                                            </div>
+
+ 
+                                            <div class="form-group">
+                                                <label class="control-label">Hobali</label>
+                                                <input type="text" name="hobali" required class="form-control input-lg" />
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="control-label">Village</label>
+                                                <input type="text" name="village" required class="form-control input-lg" />
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="control-label">Aadhaar No</label>
+                                                <input type="text" name="aadhaar" required placeholder="12893823434" class="form-control input-lg" />
+                                            </div>
+                                            <div class="form-group">
+                                                    <label class="control-label">Phone Number</label>
+                                                    <input type="number" name="phone" required placeholder="9441234567" class="form-control input-lg" id="phone" />
+                                            </div>
+
+                                            <div class="form-group">
+                                                <label class="control-label">Category</label>
+                                                <select class="form-control" name="category" id="select_category">
+                                                        <option value="SC">SC</option>
+                                                        <option value="ST">ST</option>
+                                                        <option value="General">General</option>
+                                                    </select>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="control-label">Mode of Contact</label>
+                                                <select name="modeofcontact" class="form-control" id="select_modeOfContact">
+                                                    <option value="kvk">KVK</option>
+                                                    <option value="phone">Via Phone</option>
+                                                </select>
+                                            </div>
+        
+                                            <div class="form-group">
+                                                    <label class="control-label">Crop/Enterprise</label>
+                                                    <input type="text" name="croporenterprise" required class="form-control input-lg"  />
+                                            </div>
+
+                                            <div class="form-group">
+
+                                                    <label class="control-label">Problems</label>
+                                                    <textarea class="form-control input-lg" name="problems" id="textarea_problems" cols="30" rows="6"></textarea>
+                                            </div>
+
+                                            <div class="form-group">
+                                                    <label class="control-label">Suggestions given to Farmer</label>
+                                                    <textarea class="form-control input-lg" name="suggestions" id="textarea_suggestions" cols="30" rows="7"></textarea>
+                                                </div>
+
+                                            <div id="div_submit" class="text-center">
+                                                <button class="btn btn-success btn-lg" type="submit">Submit </button>
+                                            </div>
+                                </form>
+                                
+                            </div>
+>>>>>>> 6c0ecfd7577cb7479559e13d149be21abc7f501f
                     </div>
                 </div>
                 
@@ -631,6 +747,7 @@
                                     <span aria-hidden="true">&times;</span>
                                 </button>
                                 <h4 class="modal-title" id="myModalLabel">Add New Test Sample</h4>
+<<<<<<< HEAD
                             </div>
 =======
 
@@ -749,6 +866,9 @@
                                 <h4 class="modal-title" id="myModalLabel">Add New Test Sample</h4>
                             </div>
 >>>>>>> 6c0ecfd7577cb7479559e13d149be21abc7f501f
+=======
+                            </div>
+>>>>>>> 6c0ecfd7577cb7479559e13d149be21abc7f501f
 
                             <div class="modal-body">
                                 <form method="post" action="addTestSample">
@@ -785,6 +905,7 @@
                                     <div id="div_submit">
                                         <button class="btn btn-success btn-lg" type="submit">Submit </button>
                                     </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
                             </div>
 =======
@@ -939,6 +1060,9 @@
                                     <div id="div_submit">
                                         <button class="btn btn-success btn-lg" type="submit">Submit </button>
                                     </div>
+                            </div>
+>>>>>>> 6c0ecfd7577cb7479559e13d149be21abc7f501f
+=======
                             </div>
 >>>>>>> 6c0ecfd7577cb7479559e13d149be21abc7f501f
 =======
@@ -1030,6 +1154,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
                     <div class="col-lg-6 col-md-6 col-sm-12">
                         <div class="white-box">
                             <h3 class="box-title"><small class="pull-right m-t-10 text-success"><i class="fa fa-sort-asc"></i> 18% High then last month</small> Monthly Site Traffic</h3>
@@ -1041,6 +1166,8 @@
                                 <div class="stat-item">
                                     <h6>Day</h6> <b>5.50%</b></div>
 =======
+=======
+>>>>>>> 6c0ecfd7577cb7479559e13d149be21abc7f501f
 =======
 >>>>>>> 6c0ecfd7577cb7479559e13d149be21abc7f501f
 =======
@@ -1062,6 +1189,7 @@
                             <div class="stat-item">
                                 <h6>Day</h6>
                                 <b>5.50%</b>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 6c0ecfd7577cb7479559e13d149be21abc7f501f
@@ -1113,6 +1241,30 @@
 >>>>>>> 6c0ecfd7577cb7479559e13d149be21abc7f501f
                             </div>
                         </div>
+=======
+                            </div>
+                        </div>
+                        <div id="sparkline8"></div>
+                    </div>
+                    <div class="white-box">
+                        <h3 class="box-title">
+                            <small class="pull-right m-t-10 text-danger">
+                                <i class="fa fa-sort-desc"></i> 18% High then last month</small>Weekly Site Traffic</h3>
+                        <div class="stats-row">
+                            <div class="stat-item">
+                                <h6>Overall Growth</h6>
+                                <b>80.40%</b>
+                            </div>
+                            <div class="stat-item">
+                                <h6>Montly</h6>
+                                <b>15.40%</b>
+                            </div>
+                            <div class="stat-item">
+                                <h6>Day</h6>
+                                <b>5.50%</b>
+                            </div>
+                        </div>
+>>>>>>> 6c0ecfd7577cb7479559e13d149be21abc7f501f
                         <div id="sparkline9"></div>
                     </div>
                 </div>
@@ -1129,9 +1281,12 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
                                 <h2>6350</h2> <small>From Karnataka</small>
                                 <div class="pull-right">48% <i class="fa fa-level-up text-success"></i></div>
 =======
+=======
+>>>>>>> 6c0ecfd7577cb7479559e13d149be21abc7f501f
 =======
 >>>>>>> 6c0ecfd7577cb7479559e13d149be21abc7f501f
 =======
@@ -1143,6 +1298,9 @@
                                 </div>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> 6c0ecfd7577cb7479559e13d149be21abc7f501f
+=======
 >>>>>>> 6c0ecfd7577cb7479559e13d149be21abc7f501f
 =======
 >>>>>>> 6c0ecfd7577cb7479559e13d149be21abc7f501f
@@ -1159,9 +1317,12 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
                                 <h2>3250</h2> <small>From Telangana</small>
                                 <div class="pull-right">98% <i class="fa fa-level-up text-success"></i></div>
 =======
+=======
+>>>>>>> 6c0ecfd7577cb7479559e13d149be21abc7f501f
 =======
 >>>>>>> 6c0ecfd7577cb7479559e13d149be21abc7f501f
 =======
@@ -1173,6 +1334,9 @@
                                 </div>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> 6c0ecfd7577cb7479559e13d149be21abc7f501f
+=======
 >>>>>>> 6c0ecfd7577cb7479559e13d149be21abc7f501f
 =======
 >>>>>>> 6c0ecfd7577cb7479559e13d149be21abc7f501f
@@ -1189,9 +1353,12 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
                                 <h2>1250</h2> <small>From Andhra Pradesh</small>
                                 <div class="pull-right">75% <i class="fa fa-level-down text-danger"></i></div>
 =======
+=======
+>>>>>>> 6c0ecfd7577cb7479559e13d149be21abc7f501f
 =======
 >>>>>>> 6c0ecfd7577cb7479559e13d149be21abc7f501f
 =======
@@ -1203,6 +1370,9 @@
                                 </div>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> 6c0ecfd7577cb7479559e13d149be21abc7f501f
+=======
 >>>>>>> 6c0ecfd7577cb7479559e13d149be21abc7f501f
 =======
 >>>>>>> 6c0ecfd7577cb7479559e13d149be21abc7f501f
@@ -1219,9 +1389,12 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
                                 <h2>1350</h2> <small>From Kerala</small>
                                 <div class="pull-right">48% <i class="fa fa-level-up text-success"></i></div>
 =======
+=======
+>>>>>>> 6c0ecfd7577cb7479559e13d149be21abc7f501f
 =======
 >>>>>>> 6c0ecfd7577cb7479559e13d149be21abc7f501f
 =======
@@ -1233,6 +1406,9 @@
                                 </div>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> 6c0ecfd7577cb7479559e13d149be21abc7f501f
+=======
 >>>>>>> 6c0ecfd7577cb7479559e13d149be21abc7f501f
 =======
 >>>>>>> 6c0ecfd7577cb7479559e13d149be21abc7f501f
@@ -1248,9 +1424,12 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
                                 <h2>3250</h2> <small>From Tamil Nadu</small>
                                 <div class="pull-right">98% <i class="fa fa-level-up text-success"></i></div>
 =======
+=======
+>>>>>>> 6c0ecfd7577cb7479559e13d149be21abc7f501f
 =======
 >>>>>>> 6c0ecfd7577cb7479559e13d149be21abc7f501f
 =======
@@ -1262,6 +1441,9 @@
                                 </div>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> 6c0ecfd7577cb7479559e13d149be21abc7f501f
+=======
 >>>>>>> 6c0ecfd7577cb7479559e13d149be21abc7f501f
 =======
 >>>>>>> 6c0ecfd7577cb7479559e13d149be21abc7f501f
@@ -1278,9 +1460,12 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
                                 <h2>1250</h2> <small>From Maharastra</small>
                                 <div class="pull-right">75% <i class="fa fa-level-down text-danger"></i></div>
 =======
+=======
+>>>>>>> 6c0ecfd7577cb7479559e13d149be21abc7f501f
 =======
 >>>>>>> 6c0ecfd7577cb7479559e13d149be21abc7f501f
 =======
@@ -1292,6 +1477,9 @@
                                 </div>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> 6c0ecfd7577cb7479559e13d149be21abc7f501f
+=======
 >>>>>>> 6c0ecfd7577cb7479559e13d149be21abc7f501f
 =======
 >>>>>>> 6c0ecfd7577cb7479559e13d149be21abc7f501f
@@ -1392,6 +1580,7 @@
                     </div>
                 </div>
             </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1618,6 +1807,67 @@
                                 </div>
                             </div>
 >>>>>>> 6c0ecfd7577cb7479559e13d149be21abc7f501f
+=======
+            <!-- .row -->
+            <div class="row">
+                <div class="col-lg-6 col-sm-12 col-xs-12">
+                    <div class="row">
+                        <div class="col-lg-6 col-sm-6 col-xs-12">
+                            <div class="white-box">
+                                <h3 class="box-title">Daily Sales</h3>
+                                <div class="text-right">
+                                    <span class="text-muted">Todays Income</span>
+                                    <h1>
+                                        <sup>
+                                            <i class="ti-arrow-up text-success"></i>
+                                        </sup> $12,000</h1>
+                                </div>
+                                <span class="text-success">20%</span>
+                                <div class="progress m-b-0">
+                                    <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"
+                                        style="width:20%;">
+                                        <span class="sr-only">20% Complete</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-sm-6 col-xs-12">
+                            <div class="white-box">
+                                <h3 class="box-title">Weekly Sales</h3>
+                                <div class="text-right">
+                                    <span class="text-muted">Weekly Income</span>
+                                    <h1>
+                                        <sup>
+                                            <i class="ti-arrow-down text-danger"></i>
+                                        </sup> $5,000</h1>
+                                </div>
+                                <span class="text-danger">30%</span>
+                                <div class="progress m-b-0">
+                                    <div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"
+                                        style="width:30%;">
+                                        <span class="sr-only">230% Complete</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-sm-6 col-xs-12">
+                            <div class="white-box">
+                                <h3 class="box-title">Monthly Sales</h3>
+                                <div class="text-right">
+                                    <span class="text-muted">Monthly Income</span>
+                                    <h1>
+                                        <sup>
+                                            <i class="ti-arrow-up text-info"></i>
+                                        </sup> $10,000</h1>
+                                </div>
+                                <span class="text-info">60%</span>
+                                <div class="progress m-b-0">
+                                    <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" style="width:60%;">
+                                        <span class="sr-only">20% Complete</span>
+                                    </div>
+                                </div>
+                            </div>
+>>>>>>> 6c0ecfd7577cb7479559e13d149be21abc7f501f
                         </div>
                         <div class="col-lg-6 col-sm-6 col-xs-12">
                             <div class="white-box">
@@ -1636,6 +1886,9 @@
                                         <span class="sr-only">230% Complete</span>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> 6c0ecfd7577cb7479559e13d149be21abc7f501f
+=======
 >>>>>>> 6c0ecfd7577cb7479559e13d149be21abc7f501f
 =======
 >>>>>>> 6c0ecfd7577cb7479559e13d149be21abc7f501f
@@ -1657,6 +1910,7 @@
                                         <img src="/plugins/images/heading-bg/slide6.jpg" />
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 6c0ecfd7577cb7479559e13d149be21abc7f501f
                                     </div>
@@ -1680,11 +1934,23 @@
                                             remaining essentially unchanged.</h2>
                                         <a href="#">Read More</a>
                                     </div>
+=======
+                                    </div>
+                                    <div class="news-content">
+                                        <span class="label label-danger label-rounded">Primary</span>
+                                        <h2>It has survived not only five centuries, but also the leap into electronic typesetting,
+                                            remaining essentially unchanged.</h2>
+                                        <a href="#">Read More</a>
+                                    </div>
+>>>>>>> 6c0ecfd7577cb7479559e13d149be21abc7f501f
                                 </div>
                                 <div class="item">
                                     <div class="overlaybg">
                                         <img src="/plugins/images/heading-bg/slide4.jpg" />
                                     </div>
+<<<<<<< HEAD
+>>>>>>> 6c0ecfd7577cb7479559e13d149be21abc7f501f
+=======
 >>>>>>> 6c0ecfd7577cb7479559e13d149be21abc7f501f
 =======
 >>>>>>> 6c0ecfd7577cb7479559e13d149be21abc7f501f
@@ -2186,6 +2452,7 @@
             <!-- ============================================================== -->
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 6c0ecfd7577cb7479559e13d149be21abc7f501f
 =======
 >>>>>>> 6c0ecfd7577cb7479559e13d149be21abc7f501f
@@ -2194,6 +2461,13 @@
         </div>
         <!-- /.container-fluid -->
         <footer class="footer text-center"> 2017 &copy; Ampleadmin brought to you by themedesigner.in </footer>
+=======
+        </div>
+        <!-- /.container-fluid -->
+        <footer class="footer text-center"> 2017 &copy; Ampleadmin brought to you by themedesigner.in </footer>
+    </div>
+    <!-- /#page-wrapper -->
+>>>>>>> 6c0ecfd7577cb7479559e13d149be21abc7f501f
     </div>
     <!-- /#page-wrapper -->
     </div>

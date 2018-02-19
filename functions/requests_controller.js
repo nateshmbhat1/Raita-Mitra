@@ -138,6 +138,18 @@ module.exports = function Handle_requests(app)
 		res.status(200).redirect('dashboard.html') ;
 	})
 
+	app.post('/advisoryStatistics' , urlencodedParser , (req, res)=>{
+		//TODO : validate the post request 
+		ref = admin.database().ref('/Farm Advisory Statistics/'+req.body.aadhaar) ; 
+		data = req.body ; 
+		delete data.aadhaar ; 
+
+		console.log("data is " , data) ; 
+		ref.update(data) ; 
+		console.log("updated " ) ; 
+		res.status(200).redirect('dashboard.html') ;
+	})
+
 
 	app.post('/addTestSample', urlencodedParser ,(req , res)=>{
 		if(!validatePostBody(req , res , ['phone' ,'survey_num' , 'khasra_num' , 'irrigated' , 'position' , 'farm_size'])) return ;
