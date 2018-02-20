@@ -37,9 +37,6 @@ module.exports = function Handle_requests(app)
 	app.get('/' , (req , res)=>{
 		res.redirect('index.html')
 	})
-	app.get('/error' , (req , res)=>{
-		res.redirect('404.html')
-	})
 
 	app.get('/home' , (req , res)=>{
 		res.redirect('index.html') ;
@@ -102,6 +99,7 @@ module.exports = function Handle_requests(app)
 		res.status(200).redirect('dashboard.html') ;
 	})
 
+<<<<<<< HEAD
 	app.post('/advisoryStatistics' , urlencodedParser , (req, res)=>{
 		//TODO : validate the post request 
 		ref = admin.database().ref('/Farm Advisory Statistics/'+req.body.aadhaar) ; 
@@ -150,6 +148,8 @@ module.exports = function Handle_requests(app)
 		res.status(200).redirect('dashboard.html') ;
 	})
 
+=======
+>>>>>>> parent of 780cefd... tried to implement Login
 
 	app.post('/addTestSample', urlencodedParser ,(req , res)=>{
 		if(!validatePostBody(req , res , ['phone' ,'survey_num' , 'khasra_num' , 'irrigated' , 'position' , 'farm_size'])) return ;
