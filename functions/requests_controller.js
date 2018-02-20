@@ -99,57 +99,11 @@ module.exports = function Handle_requests(app)
 		res.status(200).redirect('dashboard.html') ;
 	})
 
-<<<<<<< HEAD
-	app.post('/advisoryStatistics' , urlencodedParser , (req, res)=>{
-		//TODO : validate the post request 
-		ref = admin.database().ref('/Farm Advisory Statistics/'+req.body.aadhaar) ; 
-		data = req.body ; 
-		delete data.aadhaar ; 
+	
+	
+	
 
-		console.log("data is " , data) ; 
-		ref.update(data) ; 
-		console.log("updated " ) ; 
-		res.status(200).redirect('dashboard.html') ;
-	})
 
-	app.post('/advisoryStatistics' , urlencodedParser , (req, res)=>{
-		//TODO : validate the post request 
-		ref = admin.database().ref('/Farm Advisory Statistics/'+req.body.aadhaar) ; 
-		data = req.body ; 
-		delete data.aadhaar ; 
-
-		console.log("data is " , data) ; 
-		ref.update(data) ; 
-		console.log("updated " ) ; 
-		res.status(200).redirect('dashboard.html') ;
-	})
-
-	app.post('/advisoryStatistics' , urlencodedParser , (req, res)=>{
-		//TODO : validate the post request 
-		ref = admin.database().ref('/Farm Advisory Statistics/'+req.body.aadhaar) ; 
-		data = req.body ; 
-		delete data.aadhaar ; 
-
-		console.log("data is " , data) ; 
-		ref.update(data) ; 
-		console.log("updated " ) ; 
-		res.status(200).redirect('dashboard.html') ;
-	})
-
-	app.post('/advisoryStatistics' , urlencodedParser , (req, res)=>{
-		//TODO : validate the post request 
-		ref = admin.database().ref('/Farm Advisory Statistics/'+req.body.aadhaar) ; 
-		data = req.body ; 
-		delete data.aadhaar ; 
-
-		console.log("data is " , data) ; 
-		ref.update(data) ; 
-		console.log("updated " ) ; 
-		res.status(200).redirect('dashboard.html') ;
-	})
-
-=======
->>>>>>> parent of 780cefd... tried to implement Login
 
 	app.post('/addTestSample', urlencodedParser ,(req , res)=>{
 		if(!validatePostBody(req , res , ['phone' ,'survey_num' , 'khasra_num' , 'irrigated' , 'position' , 'farm_size'])) return ;
@@ -193,7 +147,7 @@ module.exports = function Handle_requests(app)
     console.log("qestion is: "+ req.body.qestion);
     today = new Date().getMilliseconds().toString();
 
-		ref = admin.database().ref('/Query/'+ today) ;
+		ref = admin.database().ref('/Query').push() ;
     console.log("date is : "+ today);
 
 		data = req.body ;
